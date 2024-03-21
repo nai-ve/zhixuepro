@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  background-color: #F5F5F5;
+}
+/*适配代码*/
+html{
+  /*代表了100px=1rem*/
+  font-size: 13.33333rem;
+}
+/*防止大屏字体过大*/
+@media(min-width:750px){
+  html{
+  font-size: 10px ;
+      }
+}
+/*设置*/
+.setup {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+}
+.setupp{
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  left: 323px;
+  top: 5px;
+}
+/*个人信息*/
+.information {
+  width: 100%;
+  height: 140px;
+  background-color: white;
+}
+.information .name 
+  {
+  width: 230px;
+  height: 33px;
+  border: none;
+  color: black;
+  font-size: 24px;
+  position: absolute;
+  top: 40px;
+  left: 25px;
+}
+.information .school {
+  color: #A4A4A7;
+  border: none;
+  width: 150px;
+  height: 20px;
+  position: absolute;
+  top: 80px;
+  left: 17px;
+  font-size: 14px;
+}
+.information .class {
+  color: #A4A4A7;
+  border: none;
+  width: 150px;
+  height: 20px;
+  font-size: 14px;
+  position: absolute;
+  top: 105px;
+  left :17px;
+}
+.information .number {
+  color: #A4A4A7;
+    border: none;
+    width: 150px;
+    height: 20px;
+    font-size: 14px;
+    position: absolute;
+    top: 130px;
+    left :17px;
+}
+.information .circle{
+  width: 70px;
+height: 70px;
+border-radius: 50%;d-color: #f00;
+position: absolute;
+top: 65px;
+left: 280px;
+}
+/*主要内容*/
+.connect {
+  width: 100%;
+  height: 250px;
+}
+.connect img{
+  width: 23px;
+  height: 23px;
+}
+.connect p{
+  color: black;
+  font-size: 15px;
+}
+.helpcenter {
+  width: 100%;
+  height: 62px;
+  background-color: white;
+  border-bottom: 0.5px solid #BFBFBF;
+}
+.helpcenter img{
+  position: absolute;
+  left: 15px;
+  margin-top: 20px;
+}
+.helpcenter p{
+    position: absolute;
+    left: 50px;
+    margin-top: 20px;
+}
+.arrowhead{
+  margin-left: 320px;
+}
+.arrowhead1 img{
+  width: 15px;
+  height: 15px;
+}
+/*护眼模式*/
+.eyes {
+    width: 100%;
+    height: 62px;
+    position: absolute;
+    top: 430px;
+    background-color: white;
+    border-bottom: 0.5px solid #BFBFBF;
+}
+.eyes .swich{
+  position:absolute;
+    left: 299px;
+    margin-top: 13px;
+    width: 45px;
+    height: 30px;
+}
+.eyes img{
+  position: absolute;
+  margin-top: 15px;
+  left: 15px;
+  width: 23px;
+  height: 23px;
+}
+.eyes p{
+  position: absolute;
+  left: 50px;
+  margin-top: 15px;
+}
+/*导航栏*/
+        .navbar {
+            background-color: white;
+            border-top: 1px solid #DEDEDE;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 56px;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .navbar img {
+            width: 22px;
+            height: 22px;
+            margin-bottom: 15px;
+            margin-left: 15px;
+        }
+       .navbar p{
+         font-size: 11px;
+         margin-top: 35px;
+         margin-left: -102px;
+       }
