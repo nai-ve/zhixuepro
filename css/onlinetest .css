@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  background-color: #F4F5F7;
+}
+/*适配代码*/
+html{
+  /*代表了100px=1rem*/
+  font-size: 13.33333rem;
+}
+/*防止大屏字体过大*/
+@media(min-width:750px){
+  html{
+  font-size: 10px ;
+      }
+}
+/*返回+在线考试*/
+.head {
+  width: 100%;
+  height: 45px;
+  background-color: white;
+}
+.head img{
+  width: 23px;
+  height: 23;
+  margin-left: 15px;
+  position: absolute;
+  top: 10px;
+}
+.head p{
+  color :black ;
+  font-size: 19px;
+  margin-left: 143px;
+  position: absolute;
+  top: 10px;
+}
+.connect p{
+  font-size: 17px;
+  color:#888888;
+  position: absolute;
+  top: 370px;
+  left: 90px;
+}
