@@ -1,0 +1,633 @@
+<html>
+ <head></head>
+ <body>
+  <style>
+body {transition: opacity ease-in 0.2s; } 
+body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relative; } 
+
+</style>
+  <script src="./js/main-world.ts-4ed993c7.js" type="module"></script>
+  <script async src="./js/entry.js"></script>
+  <script src="./js/bl.js"></script>
+  <script>
+        document.title="";
+    </script>
+  <title>智学网-学生端-首页</title>
+  <script type="text/javascript" src="./js/common.js"></script>
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="智学, 智学网, 智学查分">
+  <meta name="description" content="智学网是以学生在线学习和云阅卷服务为主体，为广大师生提供海量题库、高速扫描阅卷、在线评测、错题解析、学生个性学习中心等功能的在线教育平台与应用工具。">
+  <link type="image/x-icon" href="//static.zhixue.com/zhixue.ico?2024-04-16T18:28:36.835Z" rel="shortcut icon">
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script>
+  
+  var theUrl = window.location.href;
+  var aliJsUrl = "";
+  var aliEnv = "";
+  if (theUrl.indexOf("test.zhixue.com") > -1 || theUrl.indexOf("localhost") > -1) {
+    // 开发/测试
+    aliJsUrl = "//test.zhixue.com/static/bl.js";
+    aliEnv="daily";
+  } else {
+    // 现网
+    aliJsUrl = "//www.zhixue.com/static/bl.js";
+    aliEnv="prod";
+  }
+
+  !(function(c,b,d,a){c[a]||(c[a]={});c[a].config=
+      {
+        pid:"c6tm64jvv9@34edc7c81b160b4",
+        appType:"web",
+        imgUrl:"https://arms-retcode.aliyuncs.com/r.png?",
+        sendResource:true,
+        behavior:false,
+        disableHook:true,
+        environment: aliEnv,
+        enableApiCors: true,
+        ignore:{
+          ignoreApis: ['help.zhixue.com/help/']
+        }
+      };
+    with(b)with(head)with(insertBefore(createElement("script"),firstChild))setAttribute("crossorigin","",src=d)
+    })(window,document,aliJsUrl,"__bl");
+  
+</script>
+  <link type="text/css" rel="stylesheet" href="./css/base.css">
+  <link type="text/css" rel="stylesheet" href="./css/container_tk.css">
+  <link type="text/css" rel="stylesheet" href="./css/common_head.css">
+  <link type="text/css" rel="stylesheet" href="./css/common_left.css">
+  <link type="text/css" rel="stylesheet" href="./css/common_right.css">
+  <link type="text/css" rel="stylesheet" href="./css/common_foot.css">
+  <link type="text/css" rel="stylesheet" href="./css/stu_index.css">
+  <link type="text/css" rel="stylesheet" href="./css/operative_banner.css">
+  <link type="text/css" rel="stylesheet" href="./css/ui-dialog.css">
+  <script src="./js/helpsdk.js" async="true"></script>
+  <style>
+.zx-help-container,.zx-help-container ul,.zx-help-container ul li,.zx-help-container ul li a{padding:0;margin:0}.zx-help-container.bottom{bottom:110px}.zx-help-container{position:fixed;right:0;z-index:999;display:inline-block}.zx-help-container .shadow_container{background:hsla(0,0%,100%,.5);border-radius:12px 0 0 12px;font-size:0;padding:8px;box-shadow:0 2px 8px 0 rgba(0,0,0,.08);position:relative}.zx-help-container .shadow_container .help{width:68px;height:64px;text-align:center}.zx-help-container .shadow_container .help .img{display:inline-block;margin-top:12px;background:url("data:image/png;base64,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") no-repeat 50%;background-size:contain;width:20px;height:20px}.zx-help-container .shadow_container .help .text{font:14px/1.5 Microsoft YaHei,arial,SimSun,sans-serif,tahoma;margin-top:5px;color:#05c1ae;color:var(--zx-theme-main-color,#05c1ae);font-size:12px;line-height:17px}.zx-help-container .shadow_container .help:hover{background-color:#05c1ae;background-color:var(--zx-theme-main-color,#05c1ae);border-radius:8px;box-shadow:0 2px 8px 0 rgba(5,193,174,.2)}.zx-help-container .shadow_container .help:hover .img{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAABI5JREFUWEfVmW3InmMYx39/K/IapbwlbN5KkZdF8v5BbbZofPAayQcxZazRJPOBvI19sPLBB7F5SZG37Ns2Q0TYPqxmmBFSQpsmHzj0345rXa7nua77vO7neZr7qLvuus7zOP/X8fo/j0uMmGjE8DJhwBFxHHA5cBZwZP6OAgL4sfb7FHhD0paJGGkowBFxKHA7MA84tSeADcBrwHJJv/Tc28/CEbEvsAC4BziocZgttxX4Ka3qx7b4EcAxgD1Rl23Ao8BTkv4sBV5s4YiYAzwD2N2VrLOb09VfdR0aEcdn6Dh8zq+t/QG4VdLbJaCLAEeELfowsFcqXWsrS/q45JDmmog4O617YT77B1gsyRbvlE7AEbEP8CxwfWr5Gbil1BqDDk+vWf9huXZF6v+rbe8gwC/UwH5ul0r6fhCQPs8j4ugMq9Mr0JJu6A04w+CR3PgWcLWkHX3AlK6NiP2Al4G5uefetvAY18LpKieTY9aWPW+qwFYvlaDfB2xpx7S9OSYRxwDO0rU5q4FjduZkh0Gb5TM8PsmYdvU4oVnyxgO8GHgolc6R9E6pa70uIuyVY4FDgM2SXG+LJb3rELTcJ8nVabf8B3B2sK+zKayVdFHpSRFxKfAAcCbg6lLJt8D9klwBiiQi1gAueX7ZGfWO2ATsA5ek1nNK62xELAQeg87O+bykG0sQZ53+KNcukfRgta8JeH1yg3WSLihUbsuuqoF1orya1jkDuAM4OHXNk/R6od73siNukHTaGMDJur7JBwslLS1U/AFwbq41oZlf3xcRMwF3RBvnXUmzC/XeDTyRa6dXLG+3hSPCpObJXODs7OQGXpcJ5trsmDWBOXy8JIsIVx1zia2SnJADJbmH91kWSFrmP3XAK4FrgS2Spg/UuAuw1zlJLRslnTLevoj4LOvrDkn7l+hOg9jjZnkrJe2kB3XAqwFXhTWSLi5RGhGmmI5Ty++Svmjuy9pqb+0NfCnppBLdCXgMpjrgTcCJwEuSbOlJkYhwAl6Vyh6XtKhUcUS8CFxTf9E64O3AAcBSSS5TE5KIsG6XukrXr45jSb+VKo4IJ52T7w9JBzZDYrIBLwduq8IFuEzSh6VgMyQqwNsl7bzhTElIRITdXpHx74BZkjb2AZuAq5DYJOnkCSddS0Xw7dldappd6epQUiJbdFVJt1rSJU3AvctayyFuOHfls2WSXN+HkojoLGt3+gabmosaRwvgN2tE/EpJvtL3lpLG4QLduzU3kUTETUkv/eg5SWZrvSUiultzBnlv8tOGJCKmSfq7N9LcEBHd5CcBD0Uv66AiwrOL6zLpZksyt+0lfeilR1BDEfh84RlAnTStkjSrF9pdHMVzD9PbbgKfh9avSHP7zCAiwiXNd7JKVnRd2VuS1hOmsitSAvb8zFbyXKzXJTTb8dPJ+jxnu1mSmVqRDHUJTdB+y9G45lem2AODlFcAG8rSb5BSAz06o6oMjdEaBjbC4/8/bm00hNEZaNcsPTqfDBrWHo2PMi2dySzvisZnLzcdS/2zlzvgnvnsVdS2pmhR0UeZKTp7KLX/AisXLUsixAV5AAAAAElFTkSuQmCC") no-repeat 50%;background-size:contain}.zx-help-container .shadow_container .help:hover .text{color:#fff}.zx-help-container .shadow_container .help:hover~.line{display:none}.zx-help-container .shadow_container .line{position:absolute;top:77px;width:48px;height:1px;margin:0 10px;background:#dedede}.zx-help-container .shadow_container .personalized_manual{margin-top:8px;display:none;width:68px;height:80px;text-align:center}.zx-help-container .shadow_container .personalized_manual .img{display:inline-block;margin-top:12px;background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAfZJREFUWEftma9Pw1AQx+9W2g2LgxAEBI3FbEMhECSrA88PiQIEfwCgkMAkCbguQSBQrDNYPEEQAg7L1rIe6UZLYd3yut1W2ryqJr3effK9e/d+IQSe8fub6abVOAagJSKYDH4b9TsivAHgnaJldz8WV168+Oi9uLCfVv0BCCZGDdczHsL7mJZb8KB9YM2sXBLRGgA2EOiEMvgUJzg6NEuAOwCURcQrq1Bad3kCwMarWwYIcGQV9f04Yb3YWtU4JIA9tzysgj71C1itGtQyzOCWnS+d/wdgtVbZBIfOXBa7qLfE9RWWwAwpSofCas04BYINIMi0REFwAKFs5/VtBpEGchGqsGZWHoloLugZAR+tYml+oGgMP4cC52rXM01yloGcclthvFBQOajnV5/DYnZkpF8wgUyy1LBqGk2/fPqF/ZlnHbugK93c8AB7/XpQ2O//vf4ank2GPuz3awncqUA6SiJqH4590EXtw7G3tah9mGmsCblhqWGhSExGEphJyK5upMKxKBy1Dw8bMuhfrocjqS2w/v3rj2XQhc2MouBRdzIswP7MiNTeA4o+hI6CmdtuO5mhrYdF+TjsWBTmABH1kQ5g2YdF8y1gx3IuIRCHzSQdNezJIY9bGQpDlgSDiD1d9FRYMxN2KZO4a6/EXSy6xZSEq9svijttS7xpT5oAAAAASUVORK5CYII=") no-repeat 50%;background-size:contain;width:20px;height:22px}.zx-help-container .shadow_container .personalized_manual .text{font:14px/1.5 Microsoft YaHei,arial,SimSun,sans-serif,tahoma;margin-top:5px;color:#05c1ae;color:var(--zx-theme-main-color,#05c1ae);font-size:12px;line-height:17px}.zx-help-container .shadow_container .personalized_manual:hover{background-color:#05c1ae;background-color:var(--zx-theme-main-color,#05c1ae);border-radius:8px;box-shadow:0 2px 8px 0 rgba(5,193,174,.2)}.zx-help-container .shadow_container .personalized_manual:hover .img{background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAAAXNSR0IArs4c6QAAAa1JREFUWEftmT1OxDAQhb8HBT0dCFGAqLkCFXeAnp+SCig4AFBR8lMiwR2ouAL9igIhtqOnYAcliiVrtdl1Eq9CIqeKFHvm0/Pkxc4I7zKzNeAa2AFW/Gct3A+BV+BU0qfLL3dTwL4Byy3ATUv5DWw7aB/4CdgDfoAb4L1l8A3gBFgCniXtZzw+8FdRBleSzluGzdOb2SVwBgwlrY4DWwF5JOn+nwAfAnc5qJSL6yucgJuukpn1QGEzuwUOgIVCkRHwIOm4qUJN509U2MwGwOZY8IGkraYJm84vA14HdjNViwSPwIWkj0kJJ6xIXa6ZKxmlhs3s1yufurBu3kjSYlmQWMDO/prC5vOdv5asZnOXMLME3O+SqOrDrb90VX24dVszs0o+HMUaAoNEsbXAXFGGJeAoMk4JkhRuReGqPjxvSD9+2g9XVHvm/nc8XpSXruTLGMpe6SQTC9h9Gd0ZMBQ2U/il7CQzt/1wKF2McVEUjgESGqMfwMmHQ9c7YFyU/xIBeaIN6UcNOzm843v6P1y3RlJJ1FUudN4shTvXlOlc2yvrgnansZjVVRdat3+P9sE8jkI9twAAAABJRU5ErkJggg==") no-repeat 50%;background-size:contain}.zx-help-container .shadow_container .personalized_manual:hover .text{color:#fff}.zx-help-container .shadow_container .personalized_manual:hover~.line{display:none}.zx-help-container ::-webkit-scrollbar{width:5px;height:5px}.zx-help-container ::-webkit-scrollbar-track{border-radius:5px}.zx-help-container ::-webkit-scrollbar-thumb{border-radius:5px;background:#ababab}.zx-help-container ul{position:absolute;width:200px;padding:10px 15px;border-radius:3px;list-style:none;right:76px;z-index:1001;-webkit-transition:.3s ease-in-out;transition:.3s ease-in-out;-webkit-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:100% 50%;transform-origin:100% 50%;background:#fff;box-shadow:0 2px 8px 0 rgba(0,0,0,.1);box-sizing:border-box;overflow:hidden;bottom:0}.zx-help-container ul.show{-webkit-transform:scaleX(1);transform:scaleX(1)}.zx-help-container ul li:first-child{font-size:16px;font-weight:700;color:#262626;margin-bottom:8px}.zx-help-container ul li{margin-top:5px}.zx-help-container ul li a{color:#595959;line-height:20px;font-size:14px;text-decoration:none}.zx-help-container ul li a mark{background:none;color:#595959}.zx-help-container ul li:last-child{margin-top:8px;text-align:right}.zx-help-container ul li:last-child a{line-height:normal;color:#8c8c8c}.zx-help-container ul li a:hover,.zx-help-container ul li a:hover mark{color:#05c1ae;color:var(--zx-theme-main-color,#05c1ae)}
+</style>
+  <div class=" aui_state_focus" style="position: absolute; left: -9999em; top: 315px; display: block; width: auto; z-index: 1987;">
+   <div class="aui_outer">
+    <table class="aui_border">
+     <tbody>
+      <tr>
+       <td class="aui_nw"></td>
+       <td class="aui_n"></td>
+       <td class="aui_ne"></td>
+      </tr>
+      <tr>
+       <td class="aui_w"></td>
+       <td class="aui_c">
+        <div class="aui_inner">
+         <table class="aui_dialog">
+          <tbody>
+           <tr>
+            <td colspan="2" class="aui_header">
+             <div class="aui_titleBar">
+              <div class="aui_title" style="cursor: move; display: block;">
+               消息
+              </div><a class="aui_close" style="cursor: pointer; color: white; font-size: 20px; display: block;">×</a>
+             </div></td>
+           </tr>
+           <tr>
+            <td class="aui_icon" style="display: none;">
+             <div class="aui_iconBg" style="background: none;"></div></td>
+            <td class="aui_main" style="width: auto; height: auto;">
+             <div class="aui_content" style="padding: 20px 25px;">
+              <div class="aui_loading">
+               <span>loading..</span>
+              </div>
+             </div></td>
+           </tr>
+           <tr>
+            <td colspan="2" class="aui_footer">
+             <div class="aui_buttons" style="display: none;"></div></td>
+           </tr>
+          </tbody>
+         </table>
+        </div></td>
+       <td class="aui_e"></td>
+      </tr>
+      <tr>
+       <td class="aui_sw"></td>
+       <td class="aui_s"></td>
+       <td class="aui_se" style="cursor: se-resize;"></td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <script type="text/javascript">
+    var basePath = 'https://www.zhixue.com/container';
+    var zhixuebaoRootUrl = 'https://www.zhixue.com/zhixuebao';
+    var studentRootUrl = 'https://www.zhixue.com/student';
+    var gaokaoqUrl = 'https://zhixue.gaokaoq.com';
+    var isFirstView = true;
+    var stuCode = '31147310';
+</script>
+  <script type="text/javascript" src="./js/dialog-min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+a,body,dd,div,dl,dt,h1,i,img,li,span,ul{margin:0;padding:0}body,html{height:100%}body{background:#f2f2f2!important}.clearfix:after,.clearfix:before{content:"";display:table}.clearfix:after{clear:both;overflow:hidden}a,a:hover{text-decoration:none}dl,ul{list-style:none}img{border:0 none}img[src=""]{display:none}div[zxfebs=mainApp]{display:block;box-sizing:border-box;min-height:600px!important;min-height:calc(100% - 162px)!important}.header-app-container{width:100%;min-width:1200px;height:62px;font-family:"Microsoft YaHei",arial,SimSun,sans-serif,tahoma;font-size:14px;color:#333;background:#fff;border-bottom:2px solid #05c1ae;border-bottom:2px solid var(--zx-theme-main-color,#05c1ae);box-sizing:border-box}.header-app-container .header-main{width:1200px;height:62px;margin:0 auto}.header-app-container .header-logo{float:left;padding-right:25px}.header-app-container .header-logo a{float:left;display:block;height:60px;overflow:hidden}.header-app-container .header-logo a span{display:table-cell;height:60px;vertical-align:middle}.header-app-container .header-logo a span img{width:auto;height:auto;vertical-align:middle;max-width:200px;max-height:50px}.header-app-container .header-logo .zx-sub-title{float:left;padding:0 60px 0 20px;display:none;height:60px;line-height:60px;font-size:16px;font-weight:500;color:#262626;position:relative}.header-app-container .header-logo .zx-sub-title::after{content:'';position:absolute;left:0;top:22px;bottom:22px;width:1px;background:#d8d8d8}.header-app-container .header-nav{float:left}.header-app-container .header-nav>li{position:relative;float:left}.header-app-container .header-nav>li>a,.header-app-container .header-nav>li>span{display:inline-block;line-height:60px;font-size:16px;font-weight:400;color:#333;padding:0 12px;cursor:pointer}.header-app-container .header-nav>li>a.on,.header-app-container .header-nav>li>a:hover,.header-app-container .header-nav>li>span.on,.header-app-container .header-nav>li>span:hover{color:#05c1ae;color:var(--zx-theme-main-color,#05c1ae)}.header-app-container .header-nav>li>i.hot{display:inline-block;position:absolute;top:3px;min-width:15px;height:18px;line-height:18px;padding:0 2px;font-size:12px;font-style:normal;color:#fff;background:#ff5e34;border-radius:3px;white-space:nowrap;text-align:center;z-index:2;margin-left:-18px}.header-app-container .header-nav>li>i.hot:before{content:"";display:inline-block;position:absolute;top:18px;left:6px;width:0;height:0;border-top:3px solid #ff5e34;border-right:5px dashed transparent}.header-app-container .header-nav>li.zx-nav-more-wrap{z-index:111}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more::after{content:"";display:inline-block;position:absolute;width:0;height:0;border-top:6px solid #999;border-left:6px solid transparent;border-right:6px solid transparent;top:50%;margin-top:-3px;margin-left:4px}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop{display:none;position:absolute;background:#fff;border:1px solid #05c1ae;border:1px solid var(--zx-theme-main-color,#05c1ae);border-radius:3px;text-align:center;top:54px;white-space:nowrap;box-shadow:0 2px 5px rgba(0,0,0,.3)}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop li{border-bottom:1px solid #eee}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop li:last-child{border-bottom:none}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop li a{display:block;padding:0 15px;font-size:14px;color:#333;line-height:38px}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop li a:hover{color:#fff;background:#05c1ae;background:var(--zx-theme-main-color,#05c1ae)}.header-app-container .header-nav>li.zx-nav-more-wrap .zx-nav-more-drop li i{display:none}.header-app-container .header-nav>li.zx-nav-more-wrap:hover .zx-nav-more::after{border-top:0;border-bottom:6px solid #999}.header-app-container .header-nav>li.zx-nav-more-wrap:hover .zx-nav-more-drop{display:block}.header-app-container .header-extra{float:right}.header-app-container .hw-phase-subject{position:relative;float:left;z-index:111;margin-right:30px}.header-app-container .hw-phase-subject>span{padding:0 2px;line-height:60px;cursor:pointer}.header-app-container .hw-phase-subject>span em{font-style:normal}.header-app-container .hw-phase-subject>span i,.header-app-container .hw-phase-subject>span i::after{content:'';display:inline-block;width:0;height:0;border-style:solid;border-width:6px 6px 0 6px;border-color:#595959 transparent transparent transparent}.header-app-container .hw-phase-subject>span i{position:relative;vertical-align:middle;margin-left:8px}.header-app-container .hw-phase-subject>span i::after{position:absolute;left:-6px;bottom:1px;border-color:#fff transparent transparent transparent}.header-app-container .hw-phase-subject>ul{display:none;font-size:14px;position:absolute;background:#fff;border:1px solid #05c1ae;border:1px solid var(--zx-theme-main-color,#05c1ae);border-radius:3px;text-align:center;left:0;top:54px;white-space:nowrap;box-shadow:0 2px 5px rgba(0,0,0,.3);max-height:190px;overflow-y:auto}.header-app-container .hw-phase-subject>ul li{padding:9px 15px;border-bottom:1px solid #eee;cursor:pointer}.header-app-container .hw-phase-subject>ul li:last-child{border-bottom:none}.header-app-container .hw-phase-subject>ul li.on,.header-app-container .hw-phase-subject>ul li:hover{color:#fff;background:#05c1ae;background:var(--zx-theme-main-color,#05c1ae)}.header-app-container .hw-phase-subject:hover>ul{display:block}.header-app-container .header-info{float:left;height:60px;position:relative;z-index:111}.header-app-container .header-info .user-info{display:block;font-size:14px;color:#333;padding:15px 0}.header-app-container .header-info .user-info>img{width:30px;height:30px;border-radius:15px;vertical-align:middle}.header-app-container .header-info .user-info>span{display:inline-block;max-width:70px;line-height:30px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;vertical-align:middle;margin-left:5px;margin-right:5px}.header-app-container .header-info .user-info>i{display:inline-block;width:0;height:0;vertical-align:middle;border-top:6px solid #999;border-left:6px solid transparent;border-right:6px solid transparent}.header-app-container .header-info .user-info>img[src=""]~i,.header-app-container .header-info .user-info>span:empty{display:none}.header-app-container .header-drop-more{display:none;font-size:14px;position:absolute;width:130px;background:#fff;border:1px solid #05c1ae;border:1px solid var(--zx-theme-main-color,#05c1ae);border-radius:3px;text-align:center;left:50%;top:54px;margin-left:-66px;white-space:nowrap;box-shadow:0 2px 5px rgba(0,0,0,.3)}.header-app-container .header-drop-more dt{display:none;text-align:center;margin-top:5px;background:#f5f8f9;white-space:normal}.header-app-container .header-drop-more dt a{display:inline-block;width:42px;line-height:24px;color:#222;border-radius:3px;margin:0 2px;vertical-align:middle}.header-app-container .header-drop-more dt a.on,.header-app-container .header-drop-more dt a:hover{color:#fff;background:#05c1ae;background:var(--zx-theme-main-color,#05c1ae)}.header-app-container .header-drop-more dd{position:relative;border-bottom:1px solid #eee}.header-app-container .header-drop-more dd:last-child{border-bottom:none}.header-app-container .header-drop-more dd>a{display:block;line-height:38px;color:#333}.header-app-container .header-drop-more dd>a:hover{color:#fff;background:#05c1ae;background:var(--zx-theme-main-color,#05c1ae)}.header-app-container .header-hw-link{display:none;float:left;margin-top:14px;margin-right:15px;font-size:14px;color:#05c1ae;line-height:30px;height:32px;border:1px solid #05c1ae;border-radius:18px;cursor:pointer}.header-app-container .header-hw-link .header-hw-link-inner{height:30px;padding:0 16px;display:none}.header-app-container .header-hw-link .header-hw-link-inner span{display:inline-block;vertical-align:top}.header-app-container .header-hw-link .header-hw-link-inner img{position:relative;vertical-align:top}.header-app-container .header-hw-link .header-hw-link-inner .icon-sz{width:24px;height:22px;margin-right:5px;top:4px}.header-app-container .header-hw-link .header-hw-link-inner .icon-zx{display:block;width:auto;height:26px;top:2px}.header-app-container .header-package{display:none;float:left;font-size:14px;padding:0 16px;line-height:28px;color:#009f8f;background:linear-gradient(120deg,#fff1cb 14%,#8aebe1 96%);font-weight:500;border-radius:14px;margin-top:19px;margin-right:15px;cursor:pointer}.header-app-container .header-info:hover .header-drop-more{display:block}.header-app-container .header-info:hover .drop-arrow{border-top:0;border-bottom:6px solid #999}.go-workspace{position:fixed;z-index:111;left:50%;top:170px;margin-left:-680px}.go-workspace img{border-radius:5px}.pkg-tooltip{width:100%;height:28px;background:#fdedd4}.pkg-tooltip-text{width:1200px;margin:0 auto;line-height:28px;font-size:14px;font-weight:400;color:#595959;display:flex;align-items:center}.pkg-tooltip .theme-color{color:#05c1ae;color:var(--zx-theme-main-color,#05c1ae)}.pkg-tooltip .red{color:#f45454}.pkg-tooltip .pointer{cursor:pointer}.pkg-tooltip .bolder{font-weight:bolder}.pkg-tooltip .close{width:12px;height:11px;margin-left:auto}
+</style>
+  <style>
+.zy_header{border:none;background:#ffffff00;height:56px;position:relative;transition:all .5s ease}.zy_header.workspace{position:sticky;z-index:100;top:0}.zy_header.sticky{background:rgba(255,255,255,.7);box-shadow:0 3px 10px 0 rgba(0,0,0,.08)}.zy_header.sticky::before{content:'';backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);left:0;right:0;top:0;bottom:0;position:absolute;z-index:-1}.zy_header .header-main{height:56px}.zy_header .header-main .header-logo{padding-right:80px}.zy_header .header-main .header-logo a{height:56px}.zy_header .header-main .header-logo a span{height:56px}.zy_header .header-main .header-logo a span img{max-height:40px}.zy_header .header-main .header-nav{color:#262626}.zy_header .header-main .header-nav li{margin-right:8px}.zy_header .header-main .header-nav li a{height:32px;margin-top:12px;line-height:32px;border-radius:4px;font-size:14px;font-weight:500;color:#262626;padding:0 16px;cursor:pointer}.zy_header .header-main .header-nav li a.on{background:#fff;color:#368fff}.zy_header .header-main .header-nav li a.on::after{width:0}.zy_header .header-main .header-nav li a:hover{background:#fff;color:#368fff}.zy_header .header-main .header-extra .header-info .header-drop-more{background:#fff;border:1px solid #f0f0f0;border-radius:4px;box-shadow:0 8px 20px 0 rgba(0,0,0,.1);padding:4px}.zy_header .header-main .header-extra .header-info .header-drop-more dd{border:none}.zy_header .header-main .header-extra .header-info .header-drop-more dd a:hover{background:#f5f5f5;border-radius:2px;font-size:14px;font-weight:400;text-align:center;color:#262626}
+</style>
+  <div class="header-app-container" id="headerApp" style="display: block;">
+   <div class="header-main clearfix" data-role="student">
+    <h1 class="header-logo" id="headerLogo">
+		<a id="headerLink" href="#">
+			<span>
+			  <img id=headerLogoImg src="data:image/png;base64,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">
+			</span>
+		</a>
+		<span class="zx-sub-title" id="zxSubTitle"></span></h1>
+    <ul class=header-nav id=headerNav>
+        <li index=0>
+            <a href="首页.html">首页</a>
+        <li index=1>
+            <a href="成绩报告.html">成绩报告</a>
+        <li index=2>
+            <a href="智学网校.html">智学网校</a>
+            <i class=hot>开课啦</i>
+        <li index=3>
+            <a href="练习中心.html">练习中心</a>
+        <li index=4>
+            <a href="智学网-错题本.html">错题本</a>
+    </ul>
+    <div class="header-extra" id="zxHeaderExtra">
+     <div class="hw-phase-subject" id="hwPhaseSubject"></div>
+     <div class="header-hw-link" id="headerHwLink">
+      <div class="header-hw-link-inner" id="enterHomeworkLink">
+       <span class="sz-text">进入数智作业</span>
+      </div>
+     </div>
+     <div class="header-package" id="headerPackage"></div>
+     <div class="header-info">
+      <a class="user-info" href="javascript:;"> 
+	  <img src="img/avatar_default_student_200_m_3.png" />
+	  <span id="userName" title="双击输入姓名">双击输入姓名</span>
+	  <script>
+	  const userNameElement = document.getElementById('userName');
+	  
+	  userNameElement.addEventListener('dblclick', function() {
+	     this.contentEditable = true;
+	     this.focus();
+	  });
+	  
+	  userNameElement.addEventListener('blur', function() {
+	     localStorage.setItem('userName', this.innerText);
+	  });
+	  
+	  window.addEventListener('load', function() {
+	     const storedValue = localStorage.getItem('userName');
+	     if (storedValue) {
+	        userNameElement.innerText = storedValue;
+	     }
+	  });
+	  </script>
+	   <i class="drop-arrow"></i></a>
+      <dl class="header-drop-more" id="headerDropMore">
+       <dt id="roleSwitch"></dt>
+       <dd data-type="account">
+        <a class="account" target="_blank" href="http://ucenter.changyan.com?app-key=zx-container-client">账号设置</a>
+       </dd>
+       <dd data-type="school" style="display: none;">
+        <a class="school" target="_blank" href="http://umanage.changyan.com?app-key=zx-container-client">学校管理</a>
+       </dd>
+       <dd data-type="person">
+        <a class="person" href="/portalcenter/home/index/?from=web-container_top" target="_blank">其它设置</a>
+       </dd>
+       <dd data-type="central">
+        <a href="/container/container/identifyIndex" target="_blank">实名认证</a>
+       </dd>
+       <dd>
+        <a class="out" href="javascript:;">退出登录</a>
+       </dd>
+      </dl>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!--
+  <script>!function(e,n,t){var r="EDUCollector",c=n.getElementsByTagName(t)[0],o=n.createElement(t);e[r]={};var a=e[r];a._o=function(e){return function(){(a._e=a._e||[]).push([e,arguments])}};var s=["init","trackEvent","setUserId","extendLogInfo"];for(var i in s)a[s[i]]=a._o.call(null,s[i]);o.async=!0,o.src="https://dcp.changyan.com/dcp-js/entry.js",c.parentNode.insertBefore(o,c)}(window,document,"script")</script>
+    <script src="./js/ebgnavigation.min.js"></script>
+    <script>!function(){"use strict";function r(){return-1<["localhost","zhixue.com","zxct.zhixue.com","test.zhixue.com","test02.zhixue.com","onpre.zhixue.com","www.zhixue.com","edc.zhixue.com","exam.zhixue.com","examtest.zhixue.com"].indexOf(window.location.hostname)}function g(t){if("string"!=typeof t||!t)return t;try{return JSON.parse(t)}catch(e){return console.error("JSON.parse error: ",e),t}}function n(e){var t=(e||"").toUpperCase();return 0==t.indexOf("ZX_")?t:"ZX_COMMON_HEADER_"+t}function i(e,t){try{window.sessionStorage.setItem(n(e),JSON.stringify(t))}catch(e){console.error("set sessionStorage error: ",e)}}function a(e){try{return g(window.sessionStorage.getItem(n(e)))}catch(e){return console.error("get sessionStorage error: ",e),null}}function c(e){try{window.sessionStorage.removeItem(n(e))}catch(e){console.error("remove sessionStorage error: ",e)}}function t(e){for(var t=e+"=",n=document.cookie.split(";"),o=0;o<n.length;o++){for(var i=n[o];" "===i.charAt(0);)i=i.substring(1);if(-1!==i.indexOf(t))return i.substring(t.length,i.length)}return""}function p(e,t,n,o){document.cookie=e+"="+t+(n?";domain="+n:"")+(o?";path="+o:"")}function s(e){if(e&&0!==e.length)if(e.length)for(var t=0;t<e.length;t++)e[t].style.display="none";else e.style.display="none"}function l(e){if(e&&0!==e.length)if(e.length)for(var t=0;t<e.length;t++)e[t].style.display="block";else e.style.display="block"}function f(r){(r=r||{}).data=r.data||{};var a=null,c=r.timeout||3e3;function s(e){if("string"==typeof e)return e;var t=[];for(var n in e)e.hasOwnProperty(n)&&t.push(encodeURIComponent(n)+"="+encodeURIComponent(e[n]));return t.push("t="+(new Date).getTime()),t.join("&")}function i(t){try{delete window[t]}catch(e){window[t]=void 0}}(r.jsonp?function(){var t="jsonp"+Math.ceil(1e6*Math.random()),e=r.data;e.callback=t;var n=document.getElementsByTagName("head")[0],o=document.createElement("script");o.setAttribute("src",r.url+"?"+s(e)),window[t]=function(e){a&&clearTimeout(a),r.success&&r.success(e),n.removeChild(o),i(t)},n.appendChild(o),a=setTimeout(function(){r.error&&r.error(r.url+" time out"),i(t),n.removeChild(o)},c)}:function(){r.type=(r.type||"GET").toUpperCase(),r.dataType=r.dataType||"json";var e=s(r.data),n=new XMLHttpRequest;if(!n)throw new Error("you browser do not suppot XMLHttpRequest");var t=!0;if(r.async&&(t=!1),"GET"===r.type){if(n.open("GET",r.url+"?"+e,t),r.headers)for(var o in r.headers)n.setRequestHeader(o,r.headers[o]);n.send(null)}else{if(n.open("POST",r.url,t),r.headers)for(var i in r.headers)n.setRequestHeader(i,r.headers[i]);n.setRequestHeader("Content-Type",r.contentType?r.contentType:"application/x-www-form-urlencoded;charset=UTF-8"),n.send(e)}n.onreadystatechange=function(){var e,t;4===n.readyState&&(a&&clearTimeout(a),200<=n.status&&n.status<300?("",t=-1!==(e=n.getResponseHeader("Content-type")||"").indexOf("xml")&&n.responseXML?n.responseXML:"application/json"===e?g(n.responseText):n.responseText,r.success&&r.success(t)):r.error&&r.error(r.url+" error, code = "+n.status))},a=setTimeout(function(){n.abort(),r.error&&r.error(r.url+" time out")},c)})()}function d(e){return e.replace(/(^\s*)|(\s*$)/g,"")}function u(e){return e||(g(t("SSO_CUSTOM_LOGOUT_URL"))||"//"+window.location.hostname)}function o(e){var t,n,o,i;e&&e.hostName&&"none"!=e.hostName&&(window.ZX_COM_CUSTOM_PROJECT=window.ZX_COM_CUSTOM_PROJECT||{},window.ZX_COM_CUSTOM_PROJECT.flag=!0,e.title&&(window.ZX_COM_CUSTOM_PROJECT.title=e.title,o=e.title,(i=d(o||""))&&(document.title.indexOf(i)<0&&(document.title=i),setInterval(function(){document.title.indexOf(i)<0&&(document.title=i)},50)),window.UNIFIED_PORTAL&&window.ebgnavigation&&window.ebgnavigation.on("navRenderCompleted",function(){window.ebgnavigation.setAppName(e.title)})),e.loading&&(window.ZX_COM_CUSTOM_PROJECT.loading=e.loading),e.logoUrl&&!window.UNIFIED_PORTAL&&(window.ZX_COM_CUSTOM_PROJECT.logo=e.logoUrl),e.logoutUrl&&!window.UNIFIED_PORTAL&&(window.ZX_COM_CUSTOM_PROJECT.logoutUrl=e.logoutUrl),e.defaultGraph&&(window.ZX_COM_CUSTOM_PROJECT.default=e.defaultGraph),e.iconUrl&&!window.UNIFIED_PORTAL&&(window.ZX_COM_CUSTOM_PROJECT.ico=e.iconUrl,(t=document.querySelector("link[type='image/x-icon']"))&&t.parentNode.removeChild(t),(n=document.createElement("link")).setAttribute("rel","shortcut icon"),n.setAttribute("type","image/x-icon"),n.setAttribute("href",window.ZX_COM_CUSTOM_PROJECT.ico),document.getElementsByTagName("head")[0].appendChild(n)))}function w(){return-1<window.location.hostname.split(".")[0].indexOf("zuoye")}function m(e){return{base:{appId:"OAXI57PG",packageName:"com.iflytek.edu.hw"},params:e}}function h(n){f({url:"/container/app/token/getToken",type:"GET",data:{},success:function(e){var t=g(e);0===t.errorCode?n(t.result):n("")},error:function(){n(""),console.error("getToken error")}})}var v,y,e,A="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MUJBODc3MkM3M0VEMTFFQjkxMkFDQzU3QTVFNjUwNTkiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MUJBODc3MkQ3M0VEMTFFQjkxMkFDQzU3QTVFNjUwNTkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxQkE4NzcyQTczRUQxMUVCOTEyQUNDNTdBNUU2NTA1OSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxQkE4NzcyQjczRUQxMUVCOTEyQUNDNTdBNUU2NTA1OSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pt1PFigAAAWoSURBVHja7FhbbxtFFJ4zl73Zju30Bm0RFQUJcROIwjO/gp/JK29U8ISoeEAqEkIICWhRSkycxHG8u7MzwzezdeKksZt1NqUPXR1Zu+uZ2W/O5TvnDD2aTtjLd3H2Ul6vYL2C9QrWy3DJi0x2jAmimLgkIkaOOeNc4WzlHP0vsCxzGZc9Iae22tHl1BhA4cQyLoYyGqoot2ZiKoykFwPLa4jRVRWPdPFgMv4jn+5UurDGBgQR8b5Ut+P0/WzjzSTbMzo3hlNjbNQo+UBJKRddIR/sj7/bG410mXCeCcGZtyIgA9zMmkNjMObzjeEX/WuYsldp0RBZA1guKKMn5dc7W9/ujjYEjKisf/1sHBHAQZ0fdvtfXruNIROreRN7NohErDpQ6v54+5vx9nUVQx9nYqqVCi3ClA+n+1+NHkecsJ9LIQh8fyjVL9PJ/d1/bkQJQs89bzzkZpT8dLD3/f4O4sBeBiyMs47hA9AaGMGdW8EbQv0wGY+qMuW8fVhwo9/z6Z/FIXS2zHZn6gy23tbFr4cTrNA+rIjzR8UMjtw0psCxmPJXPtPOUruwwOCFj6xSndt8i1dCYlyVk6o6/5bOBQv0nVsLQpe0DmlL7vni0FaKeKuwGDPM+fSyVi7BrNI5HbJTy751wdRbu3/LOdGFHSvPVeuUBpgFOo2IjGsVFpbLBEc29Pm4uXtZy1IpEy5Q9rRpRGwXFLqpIngYDwblQY5u6vsjOfVXxWxfyA6XlbNtaqtGhjyofFAeq4uWO9/iGGPdjShOBJ9a1jIsFHpIcFeUmlmLNOwWvu2eAeQWYAFJKuStOCutZaztSEQpjNLvTtIBPpSBEF9jBeHh8Uj4SZlW1RtxCsHE9mFh96Wz72UbXSGMJ1gSQfj8l8IvX3hTC1T0btaLOTdNKKJBVj8wft9Ato9qM3gYLTj7Ka+nUFtPjL6TZICFApWaMXATPkTj8Gl3gGIwDzmbrxTrSY7u9YYgvMo5dkmwsN0Da66o6LPeEK5Wu5QMIub3R28ABZ3PR53+3bSz21BVjdtXjN41+oOsf9f7vs/cIAyICMLnv3Vqv6qie73BzJg1io7GXXXdmn7SHcSeJtxx0NGJAER19XF3gNIU6OkFwMI39o1+PU7eTrsoV46jjx17FWIWwfFWkmEkp/WKjrVqAevcrThBAvbm80HnF6opA/iQ+25FacyFdmsYcN1mn4IpkXoTj4pO64MY/N3n9QucRKwDCwyJ/AMagzLis/oZAD2wvkR26xZqvKn5cA2E2jPVb7MpwHlqoGPh4bErFHqKv8t8UyrOyF2qtvA9WA03Wzp/eLAPRu2gsT7lPeTV44t3Y36c7Bad3s0oxUQMbsSozz+DwKKRpyd/5gFifFLmW7rA+06oClf4HygXVQPKodeiBN0l9oC8WZ4Pn1xhL3+eFvb9ROdjo3e1RsDXgOocLE5WNXTyMSUfE9jJv1WJJnYgVS1d7g8vwLcrPG+pthBNUM9WWexUGpRoQz2uaM1DTWiodL6wybjHh6pwKCO9/NzwbFiIr5Eufp5OwtmLUMGI7iyVNG2cUDdDT3i8HiXgW+77DndeIyLysa3bcbqtC/iWOj6fcSeB+fu5LZ6+dwtV6+Jm5p7qXawAMucnLnMzuaTVcRHn76TdvlSPixlWgf5CqNPT9myOEnl5/vmn9+wkmsUdQPf1UneyzjUVIybMEiPKZTrHhNwZTO4JuVXm40rDFVQAd2Zj4diq5If40NbCZPCqG1GCHADKWOHycjV5wuvRdr6ZZJtVtVOVYPZwolwn5qW9Mi2cvGF74Da4wYaKNmXUk57qsCxdhE4p+BlcoCsl5NAY1MFYFLY4ctW6pFmAAhz+t+a8VIjUH5WLTEi8K0L/Q22xfN1OhXPlBAorrCmtj3ncB30wO89loRgkGdgk5oQ6Aj4ODTVqyP4TYACVCLvBpECfAAAAAABJRU5ErkJggg==",k="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAWCAYAAADeiIy1AAAAAXNSR0IArs4c6QAAATxJREFUSEu9VkFKxDAU/b+gh1BQT1KSnQt1NnoGxQOJnkE3gy7cJe1JZgb0EAp9kiEZktqmP1DaTaH9eS//vfebMvmrbdtV13VPAH6J6EFr/RneldyNMZdE9MzMRwDutdYfbj0HEGvtF4CT/UPmHyK6VUq9l5BYa6+J6A3Ascf5Vkqd9om2AM4CcClZn8TjbLXWFwmRa5mZ12E3JZ0NkbiNAlgFCw7SOeCxBTkZpWsSolIyKUkiXWy6BEBSE2P+6yhKYZKg2DNfc0iXxM9RogkZqTQ0WaIxskQS4cxNEuXISmZNRNQ0zQ2A11guiS+iMORCMbt0Q514ueYLw9icMPOd66gv5ZRfgx5JhlFSk/WoBKCkdvmP6mLHhDFmQ0Tncx58zLxTSu0xlz/KjTFXzPwy589JVVWPdV2vXUd/iSpcJhhRnbEAAAAASUVORK5CYII=",N=function(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)},T=(v={},y={},{on:function(e,t){(y[e]||(y[e]=[])).push(t),void 0!==v[e]&&t.apply(void 0,N(v[e]))},emit:function(e){for(var t=arguments.length,n=Array(1<t?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];v[e]=[].concat(n),(y[e]||[]).forEach(function(e){return e.apply(void 0,n)})},off:function(e){y[e]&&(y[e]=null)}}),I=(e=0,function(){3<=++e&&function e(){var t=document.getElementById("headerLogo"),n=document.getElementById("headerNav"),o=document.getElementById("zxHeaderExtra"),i=n.offsetWidth,r=1200-t.offsetWidth-o.offsetWidth-15;if(0!==i&&1185!=r){if(!(i<r)){for(var a=n.querySelectorAll("li"),c="",s=0,l=0,d="",u=0;u<a.length;u++){var m=a[u].offsetWidth;if(r<=(s+=m)){l=s-m+56<=r?u:u-1;break}}a.forEach(function(e,t){t===l&&(c+=e.outerHTML,d=e),l<t&&(c+=e.outerHTML,e.parentNode.removeChild(e))});var h='<span class="zx-nav-more">更多</span>';h+='<ul class="zx-nav-more-drop">'+c+"</ul>",d.className+="zx-nav-more-wrap",d.setAttribute("index",l+"-more"),d.innerHTML=h}}else setTimeout(function(){e()},300)}()});window._currentPhaseSubject=null;var x={initEventListener:function(){window.HeaderEventListener=T},highlightExtend:function(e){var t=this,n=document.getElementById("headerNav");n.querySelector("li")?this.highlight(n,e):T.on("menuLoaded",function(){t.highlight(n,e)})},rewriteMenu:function(){var e=this;function t(){var e=document.querySelector(".go-workspace");e&&e.parentNode&&e.parentNode.removeChild(e)}document.getElementById("headerNav").querySelector("li")?(this.createMenuForVessel(),t()):T.on("menuLoaded",function(){e.createMenuForVessel(),t()})},highlight:function(e,t){var n=e.querySelector('a[menuname="'+t+'"]');n&&(this.removeClass(e.querySelectorAll("a.on"),"on"),this.addClass(n,"on"))},initLogo:function(e){var t="//static.zhixue.com/zhixue.png",n=document.getElementById("headerLink"),o=document.getElementById("headerLogoImg");o.src=e||t;var i=!0;o.onerror=function(){i&&(this.src=t,i=!1)},!e&&window.ZX_COM_CUSTOM_PROJECT&&window.ZX_COM_CUSTOM_PROJECT.flag&&(n.parentNode.style.display="none"),r()&&(n.href="/htm-vessel"),o.onload=function(){I()}},createMenu:function(e,r,t){this.menuList=e;var n,o=document.getElementById("headerNav");if(o.parentNode.setAttribute("data-role",r.role),p("help_role",r.role,"zhixue.com","/"),"xf.zhixue.com"===window.location.hostname&&this.filterPocket(e,["online","pocketCourse","pocketTeach"]),window.UNIFIED_PORTAL)this.initEbgNav(e);else{t&&((n=document.createElement("a")).setAttribute("class","go-workspace"),n.setAttribute("href","//www.zhixue.com/htm-vessel/#/teacher"),n.innerHTML="<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAIAAAC1nk4lAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTlEMEFDOUNCNzFCMTFFQ0IwMkVBOTFCNzY3ODg5NDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTlEMEFDOURCNzFCMTFFQ0IwMkVBOTFCNzY3ODg5NDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFOUQwQUM5QUI3MUIxMUVDQjAyRUE5MUI3Njc4ODk0NCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFOUQwQUM5QkI3MUIxMUVDQjAyRUE5MUI3Njc4ODk0NCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Popina0AAAa4SURBVHja7Jp7bFNV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'>",document.body.appendChild(n),this.filterPocket(e,["homepage"]));for(var i="",a=0,c=e.length;a<c;a++){var s=e[a],l="";s.icon&&(l='<i class="hot">'+s.icon+"</i>");var d=s.group?'menumodule="'+s.group+'"':"",u=s.needOpenPage?'open="true"':"",m=s.linkUrl?'url="'+s.linkUrl+'"':"";i+="<li index="+a+'><a href="javascript:" '+d+" "+(s.name?'menuname="'+s.name+'"':"")+" "+m+" "+u+">"+s.title+"</a>"+l+"</li>"}o.innerHTML=i,T.emit("menuLoaded");var h=this;o.onclick=function(e){var t=e.target;if(t&&"A"==t.tagName){var n=t.getAttribute("url"),o=t.getAttribute("open");if(!n)return;var i=t.getAttribute("menuname");"hwDesign"!==i&&"hwDesignNew"!==i||(n=function(e,t){var n=[];for(var o in t)n.push(o+"="+t[o]);return-1<e.indexOf("?")?e+="&":e+="?",e+n.join("&")}(n,function(e){if(e&&-1<e.indexOf("_")){var t=e.split("_");return{phaseCode:t[0],subjectCode:t[1]}}return{}}(window._currentPhaseSubject))),h.eventTracking(t,r),h.eventTrackingNew(t,r.id),"true"==o?window.open(n):window.location.href=n}},I()}},createMenuForVessel:function(){document.getElementById("headerNav").style.display="none";var e=document.getElementById("zxSubTitle");e.style.display="block",e.innerHTML="工作台"},filterPocket:function(e,t){for(var n=e.length-1;0<=n;n--)-1<t.indexOf(e[n].name)&&e.splice(n,1)},initEbgNav:function(e){var n=[];e.forEach(function(e){var t={title:e.title,url:e.linkUrl,target:e.needOpenPage?"_blank":"_self",property:e.name};n.push(t)}),window.ebgnavigation.on("navRenderCompleted",function(){window.ebgnavigation.setAppNavList(n)})},initPackageInfo:function(){var r=this,e=document.getElementById("pkg-tooltip");e&&document.body.removeChild(e),f({url:"/container/container/teacher/getSchoolPackageInfo",data:{},type:"GET",success:function(e){var t,n,o,i=g(e);i&&i.packageOverdueRemind&&0<i.pkgRemainDay&&(t='\n              <p class="pkg-tooltip-text">\n              当前版本为<span class="bolder red" id="pkg-name">'+i.packageName+'</span>，即将在<sapn class="bolder red" id="pkg-remain">'+i.pkgRemainDay+'天</sapn>后到期。如需续期，请 <span class="theme-color pointer" id="go-pkglist"> 点击此处 ></span>\n              <img src="'+k+'" class="close pointer" id="pkg-tooltip-close" alt="">\n              </p>',"AX"!==i.packageType&&"XY"!==i.packageType||(t='\n              <p class="pkg-tooltip-text">\n              当前版本为<span class="bolder red" id="pkg-name">'+i.packageName+'</span>，即将在<sapn class="bolder red" id="pkg-remain">'+i.pkgRemainDay+'天</sapn>后到期。\n              <img src="'+k+'" class="close pointer" id="pkg-tooltip-close" alt="">\n              </p>'),(n=document.createElement("div")).classList.add("pkg-tooltip"),n.id="pkg-tooltip",n.innerHTML=t,o=document.getElementById("headerApp"),document.body.insertBefore(n,o),r.initPkgTooltip(i.packageType))},error:function(e){console.info("[zx-common-header] init package info error: ",e)}})},getSchoolPackageName:function(){var o=this;f({url:"/container/container/teacher/getSchoolPackageName",data:{},type:"GET",success:function(e){var t,n=g(e);n.showSchoolPackageVersion&&((t=document.getElementById("headerPackage")).innerText=n.packageName||"试用版",l(t),"AX"!==n.packageType&&"XY"!==n.packageType&&(t.onclick=o.goApplicationCenter),I())},error:function(e){console.info("[zx-common-header] init package info error: ",e)}})},getHomeworkLinkInfo:function(){var o=this;h(function(e){var t,n;e&&(t=window.location.host,n=m({permissionCodes:[800]}),f({url:"//"+t+"/hw/v3/firstPage/getHomeWorkPermissions",type:"POST",contentType:"application/json",headers:{Authorization:e},data:JSON.stringify(n),success:function(e){var t,n;e.result&&0<e.result.length&&(o.removeHomeworkTab(),t=document.getElementById("headerHwLink"),n=void 0,w()||(n=document.getElementById("enterHomeworkLink")),l(t),l(n),s(document.getElementById("headerPackage")),t.onclick=o.goHomework.bind(o),I())},error:function(e){console.info("[zx-common-header] getHomeWorkPermissions failed: ",e)}}))})},initHwPhaseSubject:function(){h(function(e){var t,n;e&&(t=window.location.host,n=m({permissionCodes:[800]}),f({url:"//"+t+"/szhw/index/phaseSubjects",type:"POST",contentType:"application/json",headers:{Authorization:e},data:JSON.stringify(n),success:function(e){var t,n=e||{},o=n.result;"000000"===n.code&&o&&0<o.length?(o[0].label,t=o[0].value,window._currentPhaseSubject=t,window.HeaderEventListener&&window.HeaderEventListener.emit("phaseSubjectInitVal",t)):window.HeaderEventListener&&window.HeaderEventListener.emit("phaseSubjectIsNull","NONE")},error:function(e){console.info("[zx-common-header] getHomeWorkPermissions failed: ",e)}}))})},phaseSubjectBindEvent:function(i){var r=this;i.onclick=function(e){var t,n,o=e.target;o&&"LI"===o.tagName&&""===o.className&&(t=o.getAttribute("data-code"),n=o.innerText,i.querySelector("span em").innerText=n,r.removeClass(i.querySelectorAll("li.on"),"on"),r.addClass(o,"on"),window._currentPhaseSubject=t,window.HeaderEventListener&&window.HeaderEventListener.emit("phaseSubjectSelectChanged",t))}},removeHomeworkTab:function(){s(document.querySelector('[menuname="sumHomework"]'))},goHomework:function(){var e,t,n=-1<window.location.host.indexOf("test"),o=void 0;w()||(t=e=n?"https://testzuoye.zhixue.com":"https://zuoye.zhixue.com",this.menuList.forEach(function(e){"sumHomework"===e.name&&(o+=e.linkUrl)}),o=e+"/container/login.jsp?nextpage="+encodeURIComponent(t)),window.location.href=o},initPkgTooltip:function(e){var t=document.getElementById("pkg-tooltip-close"),n=document.getElementById("go-pkglist");t.onclick=this.hidePkgTooltip,"AX"!==e&&"XY"!==e&&(n.onclick=this.goApplicationCenter)},hidePkgTooltip:function(){s(document.getElementById("pkg-tooltip"))},goApplicationCenter:function(){window.open("/htm-precision/#/applicationCenter")},eventTracking:function(e,t){try{var n={};n.role=t.role,n.menuModule=e.getAttribute("menumodule"),n.menuEName=e.getAttribute("menuname"),n.menuCName=e.innerText,window.userActionLog4Cross&&window.userActionLog4Cross("rq_web_home","1001",t.id,n)}catch(e){console.error("[zx-common-header] 埋点异常error",e)}},eventTrackingNew:function(e,t){var n=1<arguments.length&&void 0!==t?t:"";if(-1<["zuoye.zhixue.com","testzuoye.zhixue.com"].indexOf(window.location.hostname)){var o=e.getAttribute("menuname"),i="";try{switch(o){case"workspace":i="10000001";break;case"hwDesign":i="10000002";break;case"hwReport":i="10000003";break;case"teaClassWrongBook":i="10000004";break;case"situation":i="10000005";break;case"hwSupervise":i="10000006";break;case"schoolConfigurableScreen":i="10000008";break;case"areaConfigurableScreen":i="10000009"}var r={user_id:n,school_id:sessionStorage.getItem("szhw_schoolId")||""};i&&window.JzjxBehaviorTrack("container_menu",i,n,r)}catch(e){console.log("eventTrackingNew埋点异常:",e)}}},setHeadPortrait:function(e){var t=document.getElementById("userFace");t.alt="头像",t.src=e.avatar||A;var n=document.getElementById("userName");n.innerText=e.name,n.title=e.name;var o=!0;t.onerror=function(){o&&(this.src=A,o=!1)},I()},containEName:function(e,t){for(var n=0;n<e.length;n++)if(e[n].eName===t)return e[n];return null},getTheRole:function(e,t){for(var n=0,o=t.length;n<o;n++){var i=this.containEName(e,t[n]);if(i)return i}return null},getJyyRoleName:function(e){return this.getTheRole(e,["SJJYSZR","SJJYY","QXJYSZR","QXJYY","DSJYSZR","DSJYY","SJJYSFZR","DSJYSFZR","QXJYSFZR"])},getAdminRole:function(e){return this.getTheRole(e,["areaAdministrator","schoolAdministrator","subSchoolAdministrator","areaExamAdministrator"])},getSchoolRoleName:function(e){return this.getTheRole(e,["headmaster","gradeDirecter","subjectLeader","headteacher","teacher"])},rename:function(e){var t=[],n=0,o=this.getJyyRoleName(e);o&&(t[n]={id:o.roleId,eName:o.eName,cName:"教研员"},n++);var i=this.getSchoolRoleName(e);i&&(t[n]={id:i.roleId,eName:i.eName,cName:"教师"},n++);var r=this.containEName(e,"parent");r&&(t[n]={id:r.roleId,eName:r.eName,cName:"家长"},n++);var a=this.getAdminRole(e);return a&&(t[n]={id:a.roleId,eName:a.eName,cName:"管理员"}),t},multiRoles:function(e,t){var n=this.rename(e);if(!(n.length<=1))if(window.UNIFIED_PORTAL)this.initEbgRole(n,t);else{for(var o=document.getElementById("roleSwitch"),i="",r=0;r<n.length;r++)i+='<a href="javascript:" data-id="'+n[r].id+'" data-role="'+n[r].eName+'">'+n[r].cName+"</a>";o.innerHTML=i;var a=this;"student"===t||"parent"===t?a.addClass(o.querySelectorAll('dt > a[data-role="parent"]'),"on"):a.addClass(o.querySelectorAll('dt > a[data-role="'+t+'"]'),"on"),o.style.display="block",o.onclick=function(e){var t=e.target;"a"===t.nodeName.toLowerCase()&&t.className.indexOf("on")<0&&a.changeRole(t,!0)}}},initEbgRole:function(e,r){var a=[];e.forEach(function(e){var t=e.id,n=e.eName,o=e.cName,i={id:t,role:n};a.push({title:o,property:t+"_"+n,current:"student"===r&&"parent"===n||r===n,funcname:"zxSwitchRole",params:JSON.stringify(i)})});var t=[{title:"角色切换",property:"switchRole",children:a}],o=this;window.ebgnavigation.on("navRenderCompleted",function(){window.ebgnavigation.setSettingList(t),window.ebgnavigation.on("zxSwitchRole",function(e){var t,n=e||{};n.current||(t=g(n.params),o.changeRole(t,!1))})})},changeRole:function(e,t){c("u_d_s");var n="/htm-vessel";f({url:"/container/container/teacher/setUserRole",type:"POST",data:{role:t?e.getAttribute("data-role"):e.role},success:function(e){(!e||"success"===(e="string"==typeof e?g(e):e).result)&&(window.location.href=n)},error:function(e){console.info("[zx-common-header] change role failed: ",e),window.location.href=n}})},initshowDropMenu:function(e,t,n,o){var i,r,a,c=document.getElementById("headerDropMore");e?"student"===n.role&&s(c.querySelector('[data-type="school"]')):(s(c.querySelector('[data-type="account"]')),s(c.querySelector('[data-type="school"]')),c.querySelector(".person").innerText="个人中心"),i=n,r=c.querySelector('[data-type="person"]'),a=i.role,["areaExamAdministrator","scanner"].indexOf(void 0===a?"":a)<0||s(r),t&&s(c.querySelector('[data-type="central"]')),this.setDropMenuConfigUrl(o)},setDropMenuConfigUrl:function(e){var t=this,n=document.getElementById("headerDropMore");n.querySelector(".school").href="http://umanage.changyan.com?app-key=zx-container-client",n.querySelector(".account").href="http://ucenter.changyan.com?app-key=zx-container-client",n.querySelector(".out").onclick=function(){t.userLoginOut(e)}},userLoginOut:function(e){var t,n,o;function i(){f({url:"/container/ssoservice.jsp",type:"POST",data:{action:"logout"},success:function(){r()},error:function(){r()}})}function r(){window.location.href=u(e)}c("u_d_s"),c("custom_project"),t="/"?";path=/":"",n=".zhixue.com"?";domain=.zhixue.com":"",o=";expires="+new Date(0).toGMTString(),document.cookie="cur_role="+n+t+o,window.localStorage&&window.localStorage.removeItem("xToken"),f({url:"//sso.zhixue.com/sso_alpha/logout",type:"GET",jsonp:"userLoginOut",time:2e3,success:function(){i()},error:function(){i()}})},addClass:function(e,t){if(e&&0!==e.length)if(e.length)for(var n=0;n<e.length;n++)this.addCls(e[n],t);else this.addCls(e,t)},addCls:function(e,t){d(e.className)?e.className+=" "+t:e.className=t},removeClass:function(e,t){if(e&&0!==e.length)if(e.length)for(var n=0;n<e.length;n++)this.removeCls(e[n],t);else this.removeCls(e,t)},removeCls:function(e,t){var n=d(e.className);-1<n.indexOf(" "+t)&&(n=n.replace(" "+t,"")),-1<n.indexOf(t+" ")&&(n=n.replace(t+" ","")),-1<n.indexOf(t)&&(n=n.replace(t,"")),e.className=n},defaultHighLightMenu:function(e){var t=window.location.href,n=document.getElementById("headerNav");switch(e){case"teacher":case"headteacher":case"headmaster":case"gradeDirecter":case"subjectLeader":break;case"subSchoolAdministrator":case"schoolAdministrator":case"areaAdministrator":-1<t.indexOf("/adminIndex/examManage")&&this.highlight(n,"schoolManagerIndex")}},addStyles:function(e,t){var n,o=d(1<arguments.length&&void 0!==t?t:"");o&&((n=document.createElement("style")).innerText=o,e.parentNode.insertBefore(n,e))},trackSDKInit:function(){var e=!!window.location.hash,t={appId:"BRN44YaIO73",secrect:"635e122d4cd3438f9eecad8a87c86f46",publicKey:"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCK6vVi1Gtm76Z44D51kHLQqX3jtRjo5MpqpYzd4+9I9OHzVKUMr+vXTR7FZ+Cfl/CcAZzCX2Mdy3BI2ApHXTp5zWeqWOoIjL4XO+kmBA12zFZMwkpuC6olU/v3JDovmViWz6EMGIv3NoOFj8X6s1jUQZS77lyxPPg5qeK6kMtgfQIDAQAB",host:window.location.host,debug:!1,spa:e,strage:"release",configUrl:"",collectUrl:"",analysisUrl:"",auto:!1};window.EDUCollector&&window.EDUCollector.init(t),this.trackSDKDeclare()},trackSDKDeclare:function(){window.JzjxBehaviorTrack=function(e,t,n,o){var i,r;e&&t?(n&&window.EDUCollector&&window.EDUCollector.setUserId(n),r=o,i="[object Object]"===Object.prototype.toString.call(r)?o:{},window.EDUCollector&&window.EDUCollector.trackEvent(t,e,"jzjx_product",i)):console.error("[JzjxBehaviorTrack] moduleId and opCode are required !")}}},b={headMenuList:[{id:1001,linkUrl:"/exam/marking/schoolManager/index",name:"marking",title:"考试阅卷"},{id:1002,linkUrl:"/teacher/report/index",name:"classReportList",title:"测验报告"},{id:1003,linkUrl:"/paperfresh/dist/index.html",name:"papersBank",title:"选题组卷"}],userInfo:{id:"201",loginName:"",mobile:"",name:"老师",role:"teacher"},currentUserRoles:[{cName:"老师",eName:"teacher",roleId:"202"}],isVistor:!1,isGreyedSchool:!1},E=[{key:"--zx-theme-main-color",value:"#368fff"},{key:"--zx-theme-main-color1",value:"#4a9aff"},{key:"--zx-theme-main-color2",value:"#5ea5ff"},{key:"--zx-theme-main-color3",value:"#72b1ff"},{key:"--zx-theme-main-color4",value:"#86bcff"},{key:"--zx-theme-main-color5",value:"#9bc7ff"},{key:"--zx-theme-main-color6",value:"#afd2ff"},{key:"--zx-theme-main-color7",value:"#c3ddff"},{key:"--zx-theme-main-color8",value:"#d7e9ff"},{key:"--zx-theme-main-color9",value:"#ebf4ff"},{key:"--zx-theme-main-color-dark",value:"#3181e6"},{key:"--zx-theme-main-btn-color",value:"#348bf7"},{key:"--zx-theme-main-btn-font-color",value:"#3181e6"},{key:"--zx-theme-main-tag-fill",value:"rgba(54, 143, 255, 0.1)"},{key:"--zx-theme-main-tag-border",value:"rgba(54, 143, 255, 0.2)"},{key:"--zx-theme-main-opacity-sixty",value:"rgba(54, 143, 255, 0.6)"}];function S(){var e=document.getElementById("headerApp");e&&(window.scrollY?(e.classList.add("sticky"),e.classList.add("workspace")):(e.classList.remove("sticky"),e.classList.remove("workspace")))}var O=["layered_consolidation"];window.ZX_COM_CUSTOM_PROJECT={flag:!1,title:"智学网",ico:"//static.zhixue.com/zhixue.ico",logo:"//static.zhixue.com/zhixue.png",examLoading:"//cdn-oss-hz.zhixue.com/container/oss_banner/75cc8986d99744ddaa63408923759d70.jpg",loading:"//zhixue.oss-cn-hangzhou.aliyuncs.com/helpSystem/images/2020/05/28/20200528090735.gif",default:"//zhixue.oss-cn-hangzhou.aliyuncs.com/helpSystem/images/2021/12/19/20211219121706.png",loginOutUrl:u(!1)},x.initEventListener(),window.highLightHeadMenu=function(e){x.highlightExtend(e)},window.rewriteHeadMenu=function(){x.rewriteMenu()};var C={},M=window.location.hostname,R=["aihwtest.zhixue.com","aihw.zhixue.com","testzuoye.zhixue.com","zuoye.zhixue.com"],z=function(e){var t=window.location.search;""===t&&(t="?"+window.location.href.split("?")[1]);var n=t.match(new RegExp("[?&]hideCommonHead=([^&]*)(&?)","i"));return n&&2<n.length?n[1]:n}(),U=["xypjtest.zhixue.com","xypj.bbedu.net.cn"],L=document.getElementById("headerApp"),j=t("ui"),P=-1<["edc.zhixue.com","test02.zhixue.com"].concat(["zhixue.zhihui.hfsdszx.com"]).indexOf(M)||"true"===z,D={ebgNavExist:(window.clearZxHeaderCache=function(e){var t;t=e||j,c("u_d_s"),function(e){try{window.localStorage.removeItem(n(e))}catch(e){console.error("remove localStorage error: ",e)}}("u_d_l_"+t)},!1),ebgNavTimeout:!1,timer:null,maxTime:800};function Z(e){if(P)return B(o,null),void x.trackSDKInit();e?B(o,H):(L.style.display="block",r()?H():B(o,H))}function B(n,o){if(-1<U.indexOf(M)&&(window.ZX_COM_CUSTOM_PROJECT.title="蚌埠市学业评价系统"),(C=a("custom_project"))&&C.hostName)return n(C),void(o&&o());f({url:"/api-container-Manager/web/selectByHostName",type:"GET",data:{hostName:M||""},success:function(e){var t=g(e);t&&0===t.errorCode&&(i("custom_project",C=t.result?t.result:{hostName:"none"}),n(C)),o&&o()},error:function(e){console.error("[zx-common-header] get custom project error",e),o&&o()}})}function G(e){if(e)return b;var t=a("u_d_s"),n=t&&t.userInfo&&t.userInfo.id;return j&&j==n?t:null}function J(e,t){return w()?(n=e,o=t,void f({url:"/container/container/commonhead/getMenu/",type:"GET",data:{},success:function(e){var o,i,t="string"==typeof e?g(e):e;"2.0"===t.zyIndexVersion&&t.userInfo&&(t.userInfo.avatar="//cdn-oss-hz.zhixue.com/container/oss_assets/hw/container/ZIedIEGM.png"),o=t,i=n,h(function(e){var t,n;e?(t=window.location.host,n=m({}),f({url:"//"+t+"/hw/wrongbook/queryLayerConsolidateMenuPermission",type:"POST",contentType:"application/json",headers:{Authorization:e},data:JSON.stringify(n),success:function(e){var n=e.result&&e.result.hasLayerConsolidateMenuSubject;o.headMenuList=(o.headMenuList||[]).filter(function(e){var t=(e||{}).name;return O.indexOf(t)<0||n}),i(o)},error:function(e){console.info("[zx-common-header] queryLayerConsolidateMenuPermission failed: ",e),i(o)}})):i(o)})},error:function(e){console.error("[zx-common-header] requestCommonHeaderMenuData error",e),o(e)}})):(i=e,r=t,void f({url:"/container/commonModule/commonhead/getMenu/",type:"GET",data:{},success:function(e){i(e)},error:function(e){console.error("[zx-common-header] requestCommonHeaderMenuData error",e),r(e)}}));var n,o,i,r}function H(){!r()&&C&&C.style&&x.addStyles(L,C.style),x.trackSDKInit();var e=G();e?V(e):J(function(e){var t="string"==typeof e?g(e):e,n=t&&t.userInfo&&t.userInfo.id;n?(i("u_d_s",t),j&&n==j||p("ui",n,null,"/"),V(t)):V(G(!0))},function(e){console.error("[zx-common-header] get menu error",e),V(G(!0))})}function V(s){var e;s.newHomepageIndex?f({url:"/container/rebuild/teacher/getApplicationMenu",type:"GET",data:{url:(e=window.location).origin+e.pathname},success:function(e){var t,n,o,i,r,a="string"==typeof e?g(e):e,c=JSON.parse(JSON.stringify(s));a&&a.result?(n=(t=a.result).title,i=[],(o=t.headMenuList)&&o.length&&i.push.apply(i,N(o)),c.headMenuList=i,F(c),r=document.getElementById("zxSubTitle"),n?(r.style.display="block",r.innerText=n):r.style.display="none"):F(c)},error:function(e){console.error("[zx-common-header] get getApplicationMenu error",e),F(G(!0))}}):F(s)}function F(e){var t,n;w()&&"2.0"===e.zyIndexVersion&&((n=document.getElementById("headerApp")).classList.add("zy_header"),-1<(t=window.location.href.split("#")[0]).indexOf("/aihw/container")||-1<t.indexOf("/htm-hwcontainer")?window.addEventListener("scroll",S):n.classList.add("sticky"));var l,o=e.headMenuList||[],i=e.currentUserRoles||[],r=e.userInfo||{},a=e.isGreyedSchool,c=e.isVistor,s=e.newHomepageIndex;if(-1<U.indexOf(M)&&(l=r.role,f({url:"/container/rebuild/teacher/getResourceByTag",type:"GET",data:{tag:"RQ_LOGIN_CONFUSION"},success:function(e){var t=g(e),n=t?t.result:[];if(n&&0<n.length){for(var o=[],i=0,r=n.length;i<r;i++){var a,c=n[i];c.role===l&&c.url&&(a=window.location.protocol+"//"+window.location.hostname+c.url,o.indexOf(a)<0&&o.push(a))}var s=window.location.href;-1<o.indexOf(s)&&(window.location.href="/htm-vessel")}},error:function(){console.error("getConfusionLogin error")}})),window.UNIFIED_PORTAL)return x.createMenu(o,r,s),x.multiRoles(i,r.role),void(window.INIT_FOOTER&&window.INIT_FOOTER(window.UNIFIED_PORTAL));var d,u=C?C.logoUrl:"";x.initLogo(u),x.createMenu(o,r,s),"parent"!==r.role&&"student"!==r.role&&((d=w())||x.initPackageInfo(),d||x.getSchoolPackageName(),d||x.getHomeworkLinkInfo(),d?x.initHwPhaseSubject():window.HeaderEventListener&&window.HeaderEventListener.emit("phaseSubjectInitVal",null)),x.setHeadPortrait(r),x.multiRoles(i,r.role);var m,h=C?C.logoutUrl:"";x.initshowDropMenu(a,c,r,h),x.defaultHighLightMenu(r.role),R.indexOf(M)<0&&("//static.zhixue.com/frontend/sdk/helpsdk.js",(m=document.createElement("script")).setAttribute("src","//static.zhixue.com/frontend/sdk/helpsdk.js"),m.setAttribute("async",!0),document.getElementsByTagName("head")[0].appendChild(m)),window.INIT_FOOTER&&window.INIT_FOOTER(window.UNIFIED_PORTAL)}D.timer=setTimeout(function(){D.ebgNavTimeout=!0,D.ebgNavExist&&Z(!1)},D.maxTime),window.ebgnavigation&&!P?(D.ebgNavExist=!0,window.ebgnavigation.getPlatform(function(e){var t,n;D.ebgNavTimeout||(D.timer&&clearTimeout(D.timer),e&&(window.UNIFIED_PORTAL=!0,t=E,n=document.querySelector("html"),t.forEach(function(e){n.style.setProperty(e.key,e.value)}),window.ZX_COM_CUSTOM_PROJECT.flag=!0,window.ZX_COM_CUSTOM_PROJECT.loading="//zhixue.oss-cn-hangzhou.aliyuncs.com/container/oss_8113c069-95f1-4eee-9a8d-371e7c60dc04.gif",window.ZX_COM_CUSTOM_PROJECT.examLoading="//zhixue.oss-cn-hangzhou.aliyuncs.com/container/oss_8113c069-95f1-4eee-9a8d-371e7c60dc04.gif",P||(window.ebgnavigation.init({type:"application",primaryNav:{appName:"智学网",appNavList:[]},operation:{settingList:[]}}),window.ebgnavigation.on("loadNavigationError",function(){console.error("[zx-common-header] ebgNav loaded error, start init zxNav"),Z(window.UNIFIED_PORTAL=!1)}))),Z(e))})):(D.timer&&clearTimeout(D.timer),Z(!1))}()</script>
+    <script type="text/javascript" src="./js/sso.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+      var currentUser = {"avatar":"https:\/\/download.cycore.cn\/edc\/openapi\/avatar_default_student_200_m_3.png?default","id":"1500000100172167225","isAdmin":false,"loginName":"2131147310","name":"\u5361\u65AF\u6728\u6C5F\u00B7\u5410\u9C81\u6D2A\u6C5F","role":"student"};
+      var serviceUrl = 'https://www.zhixue.com/container/ssoservice.jsp';
+      var casUrl = 'https://sso.zhixue.com/sso_alpha/';
+      var basePath = 'https://www.zhixue.com/container';
+  
+      window.highLightHeadMenu && window.highLightHeadMenu('homepage');
+  </script>
+  -->
+  <div zxfebs="mainApp" class="new_warp clearfix">
+   <div class="new_main_max">
+    <title>左列</title>
+    <div class="layout_lft_max">
+     <div group="">
+      <a class="a_menu on" id="con_menu1" href="#"> 学习园地 </a>
+      <ul class="garden_drop ">
+       <li group="daily" style="display: none;"><a id="con_subMenu2" class="icon_a" href="#"> 每日任务 </a></li>
+       <li group=""><a id="con_subMenu3" class="icon_b" href="#"> 首页推荐 </a></li>
+      </ul>
+     </div>
+     <script>
+            (function(window,jQuery){
+                var conSubMenus = $("a[id^='con_subMenu']");
+                conSubMenus.click(function() {
+                    conSubMenus.removeClass("on");
+                    $(this).addClass("on");
+                });
+                var conSubSubMenus = $("a[id^='con_ssubMenu']");
+                conSubSubMenus.click(function() {
+                    conSubSubMenus.removeClass("on");
+                    $(this).addClass("on");
+                });
+            })(window,jQuery);
+        </script>
+    </div>
+    <div class="layout">
+     <div class="index_banner2" id="con_divBanner2">
+      <ul>
+      </ul><a id="con_btnCloseBnn" class="close" href="javascript:void(0);"></a> <a id="con_btnLeftBnn" class="ves_arrow lft" href="javascript:void(0);"></a> <a id="con_btnRightBnn" class="ves_arrow rgt" href="javascript:void(0);"></a>
+      <dl class="change_dot clearfix">
+      </dl>
+     </div>
+     <div id="daily" class="day_task" group="daily" style="display: none;">
+      <div class="new_title clearfix">
+       <span class="fl">每日任务</span> <a class="fr" href="https://www.zhixue.com/container/daily/index/">显示全部&gt;</a>
+      </div>
+      <div id="con_com1">
+       <div id="com_sDaily">
+       </div>
+       <script type="remark-template" id="sDaily">
+    
+    {foreach key=i item=mission from=$missions}
+    <div class="task_list" id="daily_mission_{$i}" style="display:none;">
+        <div class="task_list_top clearfix">
+            <div class="task_lft">
+                <div class="task_instr">
+                    <p class="instr1"><span>{$mission.creatorName}老师布置了一项任务</span><span>截止时间：{$mission.endTime|date_format:"%m月%d日%H:%M"}</span></p>
+
+                    <p class="instr2" title="{$mission.missionTitle}">{if $mission.subjectName neq ''}【{$mission.subjectName}】{/if}{$mission.missionTitle | truncate:43:"..."}</p>
+
+                    <p class="instr3">
+                        <span class="pro_bar"><span style="width: {100 * $mission.completedAmount / $mission.totalAmount}%"></span></span>
+                        <span class="num"><span>{$mission.completedAmount}</span>/{$mission.totalAmount}</span>
+                    </p>
+                </div>
+            </div>
+            {if $mission.status eq 1}
+                <a class="task_rgt" target="_blank" href="{if $mission.missionAddr neq ''}{$mission.missionAddr}{else}javascript:void(0);{/if}">去完成</a>
+            {else}
+                <a class="task_rgt over" href="javascript:void(0);">已完成</a>
+            {/if}
+        </div>
+        <div class="task_list_btm"></div>
+    </div>
+    {/foreach}
+    
+</script>
+       <script type="text/javascript" src="./js/index.js"></script>
+      </div>
+     </div>
+     <div id="recommond" class="day_task" group="null">
+      <div class="new_title clearfix">
+       <span class="fl">首页推荐</span>
+      </div>
+      <div id="con_com2">
+       <title>小智推荐</title>
+       <script type="text/javascript">
+      var ajaxUrl = '/apicourse/web/online/getContainerRecomment';
+      
+         function handleFixedUrl(url) {
+             if (url.indexOf("http") === 0) {
+                 return url.substr(url.indexOf("//"));
+             }
+             return url;
+         }
+      $(document).ready(function () {
+      	$("#common_r").hide();
+      	$("#iframe_r").hide();
+      	if(ajaxUrl != 'error'){
+       		$.ajax({
+                  	type: "GET",
+                  	url: ajaxUrl,
+                  	dataType: "json",
+      			async: false,
+      			cache:false,
+                  	success: function(data){
+      							 var pureTest = ["xf.zhixue.com","localhost"];
+      				 if(data.code == '1' && !(pureTest.indexOf(window.location.hostname)>-1)){
+      					 $("#pocketContentDisplay").attr("src", handleFixedUrl(data.value));
+      					 $("#iframe_r").show();
+      				 }else{
+      					 $("#iframe_r").remove();
+      					 $("#common_r").show();
+      				 }
+                     },
+      			error: function(e){
+      				$("#iframe_r").remove();
+      				$("#common_r").show();
+      			}
+              	});
+      	}else{
+      		$("#iframe_r").remove();
+      		$("#common_r").show();
+      	}
+      });
+      
+    </script>
+       <div id="common_r" style="display: block;">
+        <p class="step_instr">“在浓雾中有一座隐藏的白塔，据说这座塔里储存着让人梦寐以求的财富，但只有真正的智慧之人才能打开。勇敢的少年，此时你的眼前就是通往白塔的道路，要想探取神秘宝藏、获得智慧之冠，你必须查缺补漏自己的知识盲区方能集齐九把智慧之钥。快开启这段寻钥之旅，打开白塔神秘的大门吧。”</p>
+        <div class="check_path" id="middle_recommend">
+         <div class="path first" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=05&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 听老人说在路的西北有一座秘密花园，这座花园里有着世人做梦也想不到的美景，那里的白云是装在瓶子里的， 彩虹挂在树上，五“光”十色的辐射家谱，斑斓冷暖大气层让人目不暇接，听说能打开白塔的神秘之钥就埋在秘密花园的苹果树下，少年你何不去秘密花园一探究竟…… </span> <a class="path_num first on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path second" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=03&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 在海的那边有一座日不落帝国，少年你继续沿着此时方向，去寻找大不列颠的风情，别忘了去"世界时区"的起点——格林威治天文台， 记得带回来能打开白塔的英语之钥，听说它就放在为地球经线的起始点上哦…… </span> <a class="path_num second on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path third" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=14&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 路的北方有着一个神秘的海湾——好望角，在这里强劲的西风急流掀起的惊涛骇浪常年不断，想要破解洋流的奥秘，想要寻找地理之钥，少年你准备好冲锋的船只与号角了吗？ </span> <a class="path_num third on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path fourth" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=13&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 神秘茂盛的热带植物，可爱活泼的史前动物，少年，你真的了解你所在这个的世界么？追随达尔文的足迹，揭开物种起源的奥秘，快来寻找亚马逊雨林里暗藏的生物之钥吧。 </span> <a class="path_num fourth on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path fifth" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=12&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 古老的尼罗河水汩汩流过，在一望无际的沙漠尽头伫立着埃及神秘的金字塔，有人说法老的千年宝藏就放在其中，带上指南针和火把， 少年，想要来一场古老文明的探险之旅吗？听说法老金字塔里就有传说中的历史之钥哦。 </span> <a class="path_num fifth on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path sixth" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=01&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 华夏文明源远流长，想要知道象形文字的起源么？风、雅、颂，诸子百家，想要知道古老中华大地上曾经传颂的古老传说吗？少年，何不带上行李来场说走就走的旅行，不远处的长城暗藏着语文之钥，快来领略汉语文学的魅力吧。 </span> <a class="path_num sixth on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path seventh" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=27&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 凯撒大帝曾经说过，“Veni, Vedi, Vici （我至，我见，我征服 ）”古人曾说：“辉煌属于希腊，伟大归于罗马”， 作为西方民主的起源，罗马不得不去，据说在道路东北的罗马斗兽场埋藏有政治之钥，少年你准备踏上这条权力之路吗？ </span> <a class="path_num seventh on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path eighth" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=02&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 在遥远的东方有一座黑压压的城堡，里面蹲满了狡猾的树鸦，少年，你必须先回答了树鸦身上的算式，才能打开城堡的大门，拿到数学之钥哦。 </span> <a class="path_num eighth on" href="javascript:void(0);"></a>
+         </div>
+         <div class="path ninth" _href="https://www.zhixue.com/student/student/exercise/wrongTopicsPackage/?subjectCode=06&amp;from=web-container-index_middle">
+          <span class="instr_txt"> 智勇双全的少年，你已经集齐了物理、英语、地理、生物、历史、语文、政治、数学这八把钥匙，恭喜你终于站到白塔的门前。不过，你还有一步之遥才能打开白塔的大门哦，少年，你做好挑战化学之钥的准备，收获最后的宝藏了么？ </span> <a class="path_num ninth on" href="javascript:void(0);"></a>
+         </div>
+        </div>
+        <script type="text/javascript">
+        
+        	$("#middle_recommend").find(".path").click(function(){
+        		var _this = $(this);
+        		window.open(_this.attr("_href"));
+        	});
+        
+      </script>
+       </div>
+      </div>
+     </div>
+    </div>
+    <title>右列</title>
+    <div class="layout_rgt">
+     <div class="person_info" id="com_sAccount">
+      <div class="cover">
+       <a title="个人中心" href="https://www.zhixue.com/portalcenter/home/index/?from=web-container-index_right">
+		   <img src="img/avatar_default_student_200_m_3.png" />
+	   </a>
+      </div>
+      <p class="person_name tc editable" title="请双击输入姓名">请双击输入姓名</p>
+      <p class="cls_1 editable" title="请双击输入学校名称">请双击输入学校名称</p>
+      <p class="cls_2 editable" title="新疆部1班">请双击输入班级</p>
+      <p class="stu_id editable">学号：请双击输入学号</p>
+      <ul class="user_atten no_vip clearfix">
+        <li>等级 <b id="acc_userLevel" class="editable">Lv.1</b></li>
+      </ul>
+     </div>
+	 <script>
+	   const editableElements = document.querySelectorAll('.editable');
+	 
+	   editableElements.forEach(element => {
+	     element.addEventListener('dblclick', function() {
+	       this.contentEditable = true;
+	       this.focus();
+	     });
+	 
+	     element.addEventListener('blur', function() {
+	       localStorage.setItem(this.classList[0], this.innerText);
+	     });
+	   });
+	 
+	   window.addEventListener('load', function() {
+	     editableElements.forEach(element => {
+	       const storedValue = localStorage.getItem(element.classList[0]);
+	       if (storedValue) {
+	         element.innerText = storedValue;
+	       }
+	     });
+	   });
+	 </script>
+     <script>
+    var portalCenterRootUrl = 'https://www.zhixue.com/portalcenter';
+    var zhixuebaoRootUrl = 'https://www.zhixue.com/zhixuebao';
+</script>
+     <script type="remark-template" id="sAccount">
+    
+        <div class="cover"><a  title="个人中心" href="{$portalCenterRootUrl}/home/index/?from=web-container-index_right"><img id="con_avatar" alt=""/></a></div>
+        <p class="person_name tc" title="{$student.name}">{$student.name| truncate:23:"..."}{if $user_vipLevel eq 0}{elseif $user_vipLevel eq 1}<i class="exp_vip vip_logo"></i>{else}<i class="exp_vip vip_logo"></i>{/if}</p>
+
+        {if $student.clazz}
+            <p class="cls" title="{$student.clazz.school.name}">{$student.clazz.school.name}</p>
+            <p class="cls" title="{$student.clazz.name}">{$student.clazz.name}</p>
+        {/if}
+
+        <p class="stu_id">学号：{$student.code}</p>
+        {if $user_vipLevel eq 0}
+            <ul class="user_atten no_vip clearfix">
+                <li>等级<b id="acc_userLevel"></b></li>
+            </ul>
+            <!--<a class="ves_open_vip" href="{$zhixuebaoRootUrl}/zhixuebao/vip/member/main/?from=web-container-index_right">开通Vip</a>-->
+        {elseif $user_vipLevel eq 1}
+            <ul class="user_atten exp_vip clearfix">
+                <li>等级<b id="acc_userLevel"></b></li>
+                <li>体验VIP剩余<b>{$user_vipDays}天</b></li>
+            </ul>
+        {else}
+            <ul class="user_atten clearfix">
+                <li>等级<b id="acc_userLevel"></b></li>
+                <li>VIP剩余<b>{$user_vipDays}天</b></li>
+            </ul>
+        {/if}
+    
+</script>
+     <script type="text/javascript" src="./js/index.js"></script>
+    </div>
+   </div>
+  </div>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <style>
+a,body,div,img,span{padding:0;margin:0}.footerApp-div{display:none;width:100%;font-size:12px;font-family:"Microsoft YaHei",arial,SimSun,sans-serif,tahoma;color:#bbb;background:#404145}.footerApp-div img{border:none}.footerApp-div a,.footerApp-div a:hover{text-decoration:none}.footerApp-div .common-foot-main{width:1200px;height:100px;padding:25px 0;margin:0 auto;box-sizing:border-box}.footerApp-div .common-foot-main a{color:#bbb}.footerApp-div .common-foot-main a:hover{color:#ddd}.footerApp-div .custom-footer{width:1200px;padding:10px 0;margin:0 auto;text-align:center}
+</style>
+  <div id="footerApp" class="footerApp-div" style="display: block;">
+   <div class="common-foot-main">
+    <div></div>
+    <div style="margin-top:10px">
+     <a href="http://beian.miit.gov.cn/" target="_blank">皖ICP备18020062号-3</a> <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34019202000140" target="_blank">皖公网安备34019202000140号</a> <span>安徽知学科技有限公司 版权所有</span> <a id="agreementLink" target="_blank" href="/tlsysapp/login/agreement/?from=web-container_top">智学服务条款</a>
+    </div>
+   </div>
+  </div>
+  <script>!function(){"use strict";function e(e){var o=document.getElementById("agreementLink");o&&-1<["testzuoye.zhixue.com","zuoye.zhixue.com"].indexOf(window.location.host)&&(o.innerHTML="数智作业服务条款",o.href="https://static.zhixue.com/homework/common/html/szhw_agreement.html");var t,n=window.location.hostname,r=function(e){var o=window.location.search;""===o&&(o="?"+window.location.href.split("?")[1]);var t=o.match(new RegExp("[?&]hideCommonFoot=([^&]*)(&?)","i"));return t&&2<t.length?t[1]:t}(),i=document.getElementById("footerApp");-1<["edc.zhixue.com","test02.zhixue.com"].indexOf(n)||"true"===r||e?i&&i.parentNode&&i.parentNode.removeChild(i):(i&&(i.style.display="block"),-1<["localhost","zhixue.com","zxct.zhixue.com","test.zhixue.com","test02.zhixue.com","onpre.zhixue.com","www.zhixue.com","edc.zhixue.com","exam.zhixue.com","examtest.zhixue.com"].indexOf(window.location.hostname)||(t=(function(e){try{return function(o){if("string"!=typeof o||!o)return o;try{return JSON.parse(o)}catch(e){return console.error("JSON.parse error: ",e),o}}(window.sessionStorage.getItem(0==(o=(e||"").toUpperCase()).indexOf("ZX_")?o:"ZX_COMMON_HEADER_"+o))}catch(e){return console.error("get sessionStorage error: ",e),null}var o}("custom_project")||{}).footerTxt)&&(i.innerHTML='<div class="custom-footer">'+t+"</div>"))}document.getElementById("headerApp")?window.INIT_FOOTER=e:e(!1)}()</script>
+  <title>侧边按钮</title>
+  <link type="text/css" rel="stylesheet" href="./css/container_tk.css">
+  <script type="text/javascript">
+    var studentRootUrl = 'https://www.zhixue.com/student';
+</script>
+  <div class="side_bar">
+   <a id="sb_btnOnline" onclick="openOnline()" class="cs_online" href="javascript:void(0);" style="display: block;"> <span>在线<br>
+     客服</span> </a> <a id="sb_btnFeedBack" class="user_feedback" href="javascript:void(0);" style="display: none;"><span>用户<br>
+     反馈</span></a> <a id="sb_btnDownload" class="download" href="javascript:void(0);" style="display: none;"> <span>下载<br>
+     体验</span> <em id="sb_divDownload" class="download_on service_download" style="display:none;"> <em>教师端下载</em> <i></i> <em>家长端下载</em> <i></i> </em> </a> <a id="sb_btnBackTop" class="back_top" href="javascript:void(0);" style="display:none;"><span>返回<br>
+     顶部</span></a>
+   <script type="text/javascript" src="./js/index.js"></script>
+   <script type="text/javascript" src="./js/feedback.js"></script>
+   <script type="remark-template" id="sb_feedBackBox">
+        
+        <!--用户提交反馈弹框-->
+        <div class="user_feedback">
+            <div class="user_fill_box">
+                <textarea id="fb_txtFeedBack" class="text_show" placeholder="请描述您的意见或建议，我们会尽快参考您的想法来优化我们的产品和服务……" ></textarea>
+            </div>
+            <p>为方便回访，请您留下你的联系方式：</p>
+            <div class="fill_contacts">
+                <span>联系方式：</span>
+                <input id="fb_txtContact" type="text" placeholder="手机号码/固定电话/QQ" />
+            </div>
+            <a id="fb_btnSumbit" class="submit_feedback" href="javascript:void(0);">提交反馈</a>
+        </div>
+        
+    </script>
+  </div>
+  <script type="text/javascript" src="./js/jsmart.js"></script>
+  <script>
+  
+    function openOnline() {
+	    var online;
+		if (!window.currentUser) {
+            online = 'https://xfkfapi.iflytek.com/ydgdwx/hotIssues-pc.html?id=2c9fc4958133732301828b74163b00da';
+            try {
+                userActionLog && userActionLog("rq_click_online_customer_service", '1042', null, { url: online, role: '' });
+            } catch (e) {
+                console.error("online customer service userActionLog error: ", e);
+            }
+        } else {
+			var role = window.currentUser.role;
+			var customerId = window.currentUser.id;
+            if (['parent', 'student'].indexOf(role) > -1) {
+                online = `https://xfkfapi.iflytek.com/ydgdwx/hotIssues-pc.html?id=2c9fc4958133732301828b78229e00dd&customerId=${customerId}`;
+
+            } else {
+                online = `https://xfkfapi.iflytek.com/ydgdwx/hotIssues-pc.html?id=2c9fc4958133732301828b730e5b00d9&customerId=${customerId}`;
+            }
+            try {
+                userActionLog && userActionLog("rq_click_online_customer_service", '1042', null, { url: online, role });
+            } catch (e) {
+                console.error("online customer service userActionLog error: ", e);
+            }
+        }
+
+        var newOnlineCustom = $('#newOnlineCustom');
+        if (newOnlineCustom && newOnlineCustom.length) {
+            return;
+        }
+
+        var html = "<div id='newOnlineCustom'>";
+        html += "<iframe src='" + online + "'></iframe>";
+        html += "<a href='javascript:'></a></div>";
+        $('body').append(html);
+
+        newOnlineCustom = $('#newOnlineCustom');
+        newOnlineCustom.on('click', 'a', function() {
+            newOnlineCustom.remove();
+        });
+    }
+    window.openOnline = openOnline;
+  
+</script>
+  <div id="conOperative" class="sh_pop_warp" style="display:none;">
+   <div class="sh_tk_warp" style="z-index:1000;"></div>
+   <div class="operative_banner" style="z-index:1001;">
+    <div class="cont"></div><a href="javascript:void(0);" class="closed"></a>
+   </div>
+  </div>
+  <script type="remark-template" id="con_changePwdBox">
+    
+    <!--<div class="container_pop">-->
+        <!--<div class="container_pop_head">修改默认密码<a href="javascript:void(0);"></a></div>-->
+        <div class="container_pop_con">
+            <div class="change_old_pwd pop_common">
+                <p>为保护您的账号以及方便您登录智学网，请修改默认密码！</p>
+                <div class="p_txt_input clearfix">
+                    <span>密码：</span><input id="con_txtPwd" type="password" autocomplete="off" placeholder="请输入新密码" />
+                </div>
+                <div class="p_txt_input clearfix">
+                    <span>确认密码：</span><input id="con_txtRePwd" type="password" autocomplete="off" placeholder="请再次输入新密码" />
+                </div>
+                <p id="con_divPwdTips"  class="error_log">密码只支持数字、字母和下划线,且在6~16位之间！</p>
+            </div>
+        </div>
+        <div class="container_pop_btn"><a href="javascript:void(0);" id="con_pwdSubmit">确定</a></div>
+    <!--</div>-->
+    
+</script>
+  <script type="remark-template" id="con_vipEndBox">
+    
+    <!--VIP到期提示弹框-->
+    <!--<div class="container_pop">-->
+        <!--<div class="container_pop_head">温馨提示<a href="javascript:void(0);"></a></div>-->
+        <div class="container_pop_con pop_common">
+            <div class="vip_time_over">
+                <div class="time_over_con">
+                    <i></i>
+                    <p>您的会员已于<span>{$endTime|date_format:"%Y-%m-%d"}</span>过期~</p>
+                </div>
+            </div>
+        </div>
+        <div class="container_pop_btn">
+            <a href="{$zhixuebaoRootUrl}/zhixuebao/vip/member/main/?from=web-container-index_left" target="_blank" >去续费</a>
+            <a id="con_btnCloseVIPBox" href="javascript:void(0);">取消</a>
+        </div>
+    <!--</div>-->
+    
+</script>
+  <script type="remark-template" id="con_bindMobileBox">
+    
+    <!--<div class="container_pop">-->
+        <!--<div class="container_pop_head">绑定手机<a href="javascript:void(0);"></a></div>-->
+        <div class="container_pop_con">
+            <div class="change_old_pwd pop_common">
+                <p>为保护您的账号安全，请输入手机号并完成验证！</p>
+                <div class="p_txt_input clearfix">
+                    <span>手机号：</span><input id="con_txtBindMobile"  type="text" autocomplete="off" placeholder="请输入手机号" />
+                </div>
+                <div class="p_txt_input change_pwd clearfix">
+                    <span>验证码：</span><input id="con_txtBindCode" type="text" autocomplete="off" readonly="readonly" placeholder="请输入验证码" />
+					<a class="dis" id="con_btnGetCode" href="javascript:void(0);">获取验证码</a>
+                </div>
+                <p id="con_divMobileTips" class="error_log"></p>
+            </div>
+        </div>
+        <div class="container_pop_btn">
+            <a id="con_btnSubmitMobile" href="javascript:void(0);">确定</a>
+            <!--<a id="con_btnCloseBindMobile" href="javascript:void(0);">不再提示</a>-->
+        </div>
+    <!--</div>-->
+    
+</script>
+  <script type="text/javascript" src="./js/jsmart.js"></script>
+  <script type="text/javascript" src="./js/index.js"></script>
+  <script type="text/javascript" src="./js/banner.js"></script>
+  <script type="text/javascript" src="./js/logSDK.js"></script>
+  <script type="text/javascript" src="./js/analysis.js" async></script><yd-mg-icon style="position: fixed; z-index: 2147483647;"></yd-mg-icon><yd-mg-block-icon></yd-mg-block-icon><yd-image-ocr style="z-index: 2147483647;"></yd-image-ocr>
+ </body>
+</html>
