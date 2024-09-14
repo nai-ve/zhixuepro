@@ -1,0 +1,548 @@
+.identify-wrap {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+  overflow: hidden;
+}
+.zt-identify {
+  width: 1220px;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  top: 60px;
+  bottom: 0;
+  margin-left: -600px;
+  z-index: 1001;
+}
+.zt-identify iframe {
+  width: 100%;
+  height: 100%;
+}
+.identify-head {
+  height: 60px;
+  background: #fff;
+  overflow: hidden;
+}
+.head-main {
+  width: 1200px;
+  margin: 0 auto;
+}
+.head-main img {
+  height: 50px;
+  margin-top: 5px;
+}
+.identify {
+  width: 1200px;
+  padding: 60px 0;
+  box-sizing: border-box;
+  background: #fff;
+  margin: 20px auto 0;
+  box-sizing: border-box;
+  height: calc(100% - 100px);
+}
+.identify .title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.85);
+}
+.identify .content {
+  width: 770px;
+  margin: 20px auto 0;
+}
+.identify .content p {
+  text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 20px;
+}
+.identify .content p + p {
+  margin-top: 10px;
+}
+.identify .content p a {
+  color: #05c1ae;
+}
+.identify .steps {
+  text-align: center;
+  margin-top: 30px;
+}
+.identify .steps > div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.identify .steps .step {
+  display: inline-block;
+  width: 168px;
+  vertical-align: top;
+}
+.identify .steps .step span {
+  display: block;
+}
+.identify .steps .step .icon1,
+.identify .steps .step .icon2,
+.identify .steps .step .icon3 {
+  width: 92px;
+  height: 92px;
+  background: url('../img/steps-icon.png') no-repeat left center;
+  margin: 0 auto;
+}
+.identify .steps .step .icon2 {
+  background-position: center;
+}
+.identify .steps .step .icon3 {
+  background-position: right center;
+}
+.identify .steps .step .step-span {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 16px;
+  margin: 11px 0 8px 0;
+}
+.identify .steps .step .step-tip {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 22px;
+}
+.point-group::before,
+.point-group::after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.point-group,
+.point-group::before,
+.point-group::after {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(216, 216, 216, 1);
+}
+.point-group {
+  position: relative;
+  vertical-align: top;
+  margin-top: 46px;
+}
+.point-group::before {
+  left: -12px;
+}
+.point-group::after {
+  left: 12px;
+}
+.error-msg {
+  display: none;
+  font-size: 14px;
+  color: #f45454;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: -35px;
+}
+.error-msg i {
+  display: inline-block;
+  vertical-align: -3px;
+  margin-right: 10px;
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #f45454;
+  border-radius: 100%;
+}
+.error-msg i::before,
+.error-msg i::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  background: #f45454;
+  left: 49%;
+  top: 3px;
+}
+.error-msg i::after {
+  height: 1px;
+  top: 10px;
+}
+.footer {
+  margin-top: 72px;
+  text-align: center;
+}
+.footer a {
+  display: block;
+  width: 105px;
+  margin: 0 auto;
+}
+.footer a.begin-identify {
+  line-height: 40px;
+  font-size: 14px;
+  color: #fff;
+  background: #05c1ae;
+  border-radius: 3px;
+}
+.footer a.change-account {
+  line-height: 24px;
+  font-size: 16px;
+  color: #05c1ae;
+  margin-top: 25px;
+}
+
+/* 隐私弹框 */
+.spe-dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0.7;
+  z-index: 9999;
+}
+.spe-dialog {
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  width: 500px;
+  background: #fff;
+  z-index: 10001;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.spe-dialog-header {
+  position: relative;
+  padding: 0 15px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #0dc2b3;
+}
+.spe-dialog-header a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: x-large;
+  font-weight: 400;
+}
+.spe-dialog-header a:hover {
+  color: #efefef;
+}
+.spe-dialog-body {
+  padding: 20px 30px;
+}
+.spe-dialog-footer {
+  text-align: center;
+  padding: 0 30px 20px;
+}
+.spe-dialog-footer a {
+  display: inline-block;
+  width: 90px;
+  line-height: 36px;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+  background: #0dc2b3;
+  border-radius: 3px;
+}
+
+.spe-dialog-footer .spe-dialog-find-account {
+  margin-right: 20px;
+}
+
+.spe-dialog-body iframe {
+  width: 100%;
+  height: 400px;
+  background: #f2f2f2;
+}
+
+.welcome-box-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.welcome-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 268px;
+  height: 288px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-left: -134px;
+  margin-top: -200px;
+}
+.welcome-box .div1 {
+  margin-top: 30px;
+}
+.checkmark {
+  position: relative;
+}
+.checkmark img {
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(231, 231, 231, 1);
+  border-radius: 100%;
+}
+.checkmark i {
+  display: inline-block;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: rgba(5, 193, 174, 1);
+  color: #fff;
+  border-radius: 100%;
+  left: 50%;
+  margin-left: -12px;
+  bottom: -8px;
+}
+.checkmark i::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: 7px;
+  margin-left: -6px;
+}
+.welcome-box .p1 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 22px;
+  margin-top: 20px;
+}
+.welcome-box .p2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 20px;
+  margin-top: 8px;
+}
+.welcome-box .mt18 {
+  margin-top: 18px;
+}
+.welcome-box .mt36 {
+  margin-top: 36px;
+}
+.welcome-box .btn {
+  display: inline-block;
+  width: 144px;
+  line-height: 36px;
+  background: rgba(5, 193, 174, 1);
+  color: #fff;
+  border-radius: 3px;
+}
+.welcome-box .p3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(5, 193, 174, 1);
+  line-height: 20px;
+  margin-top: 15px;
+}
+.welcome-box .nono {
+  cursor: pointer;
+}
+
+.bind-zx-account {
+  width: 800px;
+  height: 500px;
+  position: fixed;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  margin-left: -400px;
+  margin-top: -250px;
+  border-radius: 3px;
+  padding-top: 100px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.bind-zx-account h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+  line-height: 30px;
+}
+.bind-zx-account p {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 22px;
+  margin-top: 15px;
+}
+.bind-zx-account .input {
+  width: 320px;
+  height: 38px;
+  background: rgba(251, 251, 251, 1);
+  border-radius: 4px;
+  border: 1px solid rgba(231, 231, 231, 1);
+  margin: 20px auto 0;
+}
+.bind-zx-account .input span {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 38px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.bind-zx-account .input input {
+  width: 265px;
+  height: 38px;
+  border: none;
+  outline: none;
+  background: no-repeat;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+.bind-zx-account .note {
+  /* margin-top: 20px; */
+  font-size: 14px;
+  font-weight: 400;
+  color: #f00;
+  width: 320px;
+  margin: 15px auto 0;
+}
+.bind-zx-account .note span {
+  float: left;
+  max-width: 250px;
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.bind-zx-account .note a {
+  float: right;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+}
+.bind-zx-account .to-bind-login {
+  width: 320px;
+  line-height: 40px;
+  background: rgba(3, 177, 159, 1);
+  border-radius: 4px;
+  display: block;
+  margin: 15px auto 0;
+  color: #fff;
+}
+.bind-zx-account .to-bind-login:hover {
+  opacity: 0.7;
+}
+.yjg-html,
+.yjg-body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.yjg-body {
+  background: url('../img/pwd_fake_index.jpg') no-repeat center top;
+}
+
+/* web&wap 登录遇到问题 */
+.meet-problem-html,
+.meet-problem-body,
+.web-show,
+.mobile-show {
+  height: 100%;
+}
+.meet-problem-body {
+  background-color: #f8f8f8;
+}
+.problem-content {
+  width: 1200px;
+  height: calc(100% - 85px);
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 180px;
+  margin-top: 25px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.problem-content a {
+  display: inline-block;
+  width: 200px;
+  height: 160px;
+  margin-left: 40px;
+  background-image: url(../img/find_pwd.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: top;
+}
+.problem-content a:first-child {
+  background-image: url(../img/find_account.png);
+  margin-left: 0;
+}
+.problem-content .qr-login {
+  margin-left: 40px;
+  background-size: 100%;
+  background-image: url(../img/qr_login.png);
+}
+.problem-content .common-login {
+  margin-left: 40px;
+  background-size: 100%;
+  background-image: url(../img/common_login.png);
+}
+
+/* wap */
+.mobile-show {
+  background-color: #fff;
+}
+.mobile-show .title {
+  line-height: 44px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(17, 17, 17, 1);
+  line-height: 48px;
+  text-align: center;
+  border-bottom: 1px solid #ebebeb;
+}
+.mobile-show a {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  margin: 0 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #ebebeb;
+  color: #111;
+  font-weight: 400;
+}
+.mobile-show i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/wap-right-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  margin-top: -10px;
+}
+
+.meet-problem-body .web-show,
+.meet-problem-body .mobile-show {
+  display: none;
+}
